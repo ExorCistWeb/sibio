@@ -184,6 +184,13 @@ h2 {
     color: #fff;
 }
 
+h3 {
+    font-family: 'TT Travels';
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
 p {
     font-size: 16px;
     font-weight: 400;
@@ -772,4 +779,20 @@ p {
 
 .swiper-pagination-bullet-active {
     background: #fff;
+}
+
+.productSwiper .card_slider {
+    position: relative;
+}
+
+.productSwiper {
+    width: 100%;
+    max-width: 1385px !important;
+}
+
+.product h3 {
+    width: 100%;
+    max-width: 1385px;
+    margin: 0 auto;
+    margin-bottom: 71px;
 }

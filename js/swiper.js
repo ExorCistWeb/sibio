@@ -110,3 +110,11 @@ var swiper = new Swiper(".mySwiper", {
     },
 
 });
+var swiper = new Swiper(".productSwiper", {
+    slidesPerView: 5,
+    spaceBetween: 22,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});

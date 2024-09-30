@@ -1,0 +1,775 @@
+@import url(../fonts/TTNormsPro/stylesheet.css);
+
+/* font-family: 'TT Norms Pro'; */
+
+@import url(../fonts/TTTravels/stylesheet.css);
+
+/* f  font-family: 'TT Travels'; */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+html,
+body {
+    width: 100%;
+    background: #000;
+}
+
+body {
+    font-family: 'TT Norms Pro';
+}
+
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#about {
+    background-image: url(../img/bg/about.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+header {
+    padding: 50px 0 0;
+    z-index: 9999;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left_header {
+    display: flex;
+    align-items: flex-start;
+    gap: 38px;
+}
+
+.left_header button {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 192px;
+    height: 31px;
+    background: #000;
+    border-radius: 10px;
+    border: 1px solid #858994;
+}
+
+.left_header button::before {
+    content: url(../img/effects/catalog.png);
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+.center_header ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.center_header ul li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.center_header ul li .active {
+    color: #5c5859;
+}
+
+.right_header {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.right_header form {
+    width: 221px;
+    max-width: 221px;
+    overflow: hidden;
+    height: 30px;
+    border-radius: 14.5px;
+    background: #464c58;
+    display: flex;
+    align-items: center;
+    padding: 0 13px;
+    gap: 8px;
+}
+
+.right_header form input,
+.right_header form button {
+    background: transparent;
+}
+
+.right_header form input {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    width: 100%;
+}
+
+.basket {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.basket a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.basket .number {
+    width: 31px;
+    height: 31px;
+    display: flex;
+    background: #fff;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+}
+
+.basket .number::after {
+    content: ' ';
+    display: block;
+    background: #929292;
+    border-radius: 50px;
+    border: 1px solid #000;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    right: 0;
+    top: 1px;
+}
+
+h1 {
+    font-family: 'TT Travels';
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+
+h2 {
+    font-family: 'TT Travels';
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.about {
+    padding: 36px 0 0;
+}
+
+.s_content {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.s_content img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.about_title {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 9px;
+    margin-left: 273px;
+}
+
+.about_title h1 span {
+    color: #9aa5bb;
+}
+
+.about_slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 423px;
+}
+
+.card_slider_content {
+    display: flex;
+    position: absolute;
+    z-index: 15;
+    right: 134px;
+    top: 45px;
+}
+
+.card_slider {
+    display: flex;
+    width: 256px;
+    height: 361px;
+    flex-direction: column;
+}
+
+.card_slider_btn {
+    position: absolute;
+    top: 214px;
+    right: 17px
+}
+
+.card_slider_img {
+    height: 234px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_slider_info {
+    background-position: top left;
+    height: 126px;
+    display: flex;
+    flex-direction: column;
+    padding: 13px 30px;
+    gap: 20px;
+}
+
+.card_slider_info h2 {
+    font-size: 14px;
+}
+
+.card_slider {
+    display: none;
+}
+
+.card_slider:first-child {
+    display: block;
+    /* Первая карточка отображается по умолчанию */
+}
+
+.card_slider_orange {
+    background-image: url(../img/effects/orange_card.png);
+}
+
+.card_slider_orange .card_slider_info {
+    background-image: url(../img/effects/orange_card_b.png);
+}
+
+.card_slider_blue {
+    background-image: url(../img/effects/blue_card.png);
+}
+
+.card_slider_blue .card_slider_info {
+    background-image: url(../img/effects/blue_card_b.png);
+}
+
+.card_slider_green {
+    background-image: url(../img/effects/green_card.png);
+}
+
+.card_slider_green .card_slider_info {
+    background-image: url(../img/effects/green_card_b.png);
+}
+
+.card_slider_fiol {
+    background-image: url(../img/effects/fiol_card.png);
+}
+
+.card_slider_fiol .card_slider_info {
+    background-image: url(../img/effects/fiol_card_b.png);
+}
+
+.a_slide_one {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: left 0.3s ease;
+}
+
+.scroll_fon {
+    position: absolute;
+    z-index: 0;
+    /* плавный переход */
+    width: 100%;
+}
+
+.block_a_card {
+    position: absolute;
+    z-index: 6;
+}
+
+.block_a_card img {
+    position: absolute;
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+
+/* Плавное появление изображения при активном состоянии */
+
+.block_a_card.active img {
+    opacity: 1;
+    visibility: visible;
+}
+
+.block_a_card_one img {
+    left: -103px;
+    top: -140px;
+}
+
+.block_a_card_two img {
+    left: -103px;
+    top: -60px;
+}
+
+.block_a_card_three img {
+    left: -103px;
+    top: -60px;
+}
+
+.block_a_card_four img {
+    left: -98px;
+    top: -70px;
+}
+
+.block_a_card_five img {
+    left: -113px;
+    top: -35px;
+}
+
+.block_a_card_six img {
+    left: -103px;
+    top: -135px;
+}
+
+.block_a_card_seven img {
+    left: -98px;
+    top: -60px;
+}
+
+.block_a_card_eight img {
+    left: -103px;
+    top: -60px;
+}
+
+.about_card_btn {
+    background-image: url(../img/effects/plus_btn.svg);
+    color: #fff;
+    background-size: 100%;
+    width: 43px;
+    height: 43px;
+    background-color: transparent;
+    position: relative;
+    z-index: 5;
+    font-family: 'TT Travels';
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.about_card_btn span {
+    position: relative;
+    z-index: 7;
+}
+
+
+/* .about_card_btn::before {
+    content: url(../img/effects/plus_btn_shadow.svg);
+    position: absolute;
+    display: block;
+    width: 84px;
+    height: 84px;
+    z-index: 2;
+    left: -12px;
+    top: -9px;
+} */
+
+.block_a_card_one {
+    left: 360px;
+    top: 200px;
+}
+
+.block_a_card_two {
+    left: 1060px;
+    top: 257px;
+}
+
+.block_a_card_three {
+    left: 1305px;
+    top: 244px;
+}
+
+.block_a_card_four {
+    left: 1500px;
+    top: 130px;
+}
+
+.block_a_card_five {
+    left: 1700px;
+    top: 286px;
+}
+
+.block_a_card_six {
+    left: 2040px;
+    top: 250px;
+}
+
+.block_a_card_seven {
+    left: 2250px;
+    top: 276px;
+}
+
+.block_a_card_eight {
+    left: 2380px;
+    top: 167px;
+}
+
+.swiper_about {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    overflow: hidden;
+    max-width: 1303px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.swiper_about_btn {
+    position: relative;
+    z-index: 10;
+    max-width: 1285px;
+    width: 100%;
+    display: flex;
+    transition: left 0.3s ease;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.swiper_list_btn {
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.swiper_list_btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19px;
+    height: 19px;
+    border-radius: 50px;
+    background: #fff;
+    position: absolute;
+    z-index: 12;
+}
+
+.swiper_list_btn button:nth-child(1) {
+    left: 0;
+    top: 19px;
+    z-index: 12;
+}
+
+.swiper_list_btn button:nth-child(2) {
+    right: 0;
+    top: 19px;
+    z-index: 12;
+}
+
+.swiper_about_btn button {
+    height: 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: start;
+    background: rgba(126, 138, 158, 0.58);
+    border-radius: 14.5px;
+    padding: 8px 13px;
+    position: relative;
+    z-index: 40;
+    overflow: hidden;
+    /* Чтобы скрыть элементы при анимации */
+    transition: background 0.5s ease;
+    /* Плавное исчезновение фона */
+}
+
+.swiper_about_btn button h2,
+.swiper_about_btn button p {
+    position: relative;
+    z-index: 999;
+}
+
+.swiper_about_btn button p {
+    font-size: 12px;
+}
+
+.swiper_about_btn button:nth-child(1) {
+    min-width: 244px;
+    max-width: 244px;
+}
+
+.swiper_about_btn button:nth-child(1)::before {
+    content: url(../img/effects/btn1.png);
+    left: -214px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(1)::after {
+    content: url(../img/effects/btn.png);
+    right: -56px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(2) {
+    min-width: 285px;
+}
+
+.swiper_about_btn button:nth-child(2)::before {
+    content: url(../img/effects/btn2.png);
+    left: -253px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(2)::after {
+    content: url(../img/effects/btn.png);
+    right: -56px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(3) {
+    min-width: 294px;
+}
+
+.swiper_about_btn button:nth-child(3)::before {
+    content: url(../img/effects/btn3.png);
+    left: -261px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(3)::after {
+    content: url(../img/effects/btn.png);
+    right: -56px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(4) {
+    min-width: 265px;
+}
+
+.swiper_about_btn button:nth-child(4)::before {
+    content: url(../img/effects/btn4.png);
+    left: -233px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(4)::after {
+    content: url(../img/effects/btn.png);
+    right: -56px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(5) {
+    min-width: 265px;
+}
+
+.swiper_about_btn button:nth-child(5)::before {
+    content: url(../img/effects/btn5.png);
+    left: -233px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(5)::after {
+    content: url(../img/effects/btn.png);
+    right: -56px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(6) {
+    min-width: 265px;
+}
+
+.swiper_about_btn button:nth-child(6)::before {
+    content: url(../img/effects/btn6.png);
+    left: -233px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(6)::after {
+    content: url(../img/effects/btn.png);
+    right: -56px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(7) {
+    min-width: 265px;
+}
+
+.swiper_about_btn button:nth-child(7)::before {
+    content: url(../img/effects/btn7.png);
+    left: -233px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(7)::after {
+    content: url(../img/effects/btn.png);
+    right: -56px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(8) {
+    min-width: 265px;
+}
+
+.swiper_about_btn button:nth-child(8)::before {
+    content: url(../img/effects/btn7.png);
+    left: -233px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button:nth-child(8)::after {
+    content: url(../img/effects/btn.png);
+    right: -56px;
+    /* Начальная позиция для анимации */
+}
+
+.swiper_about_btn button::before,
+.swiper_about_btn button::after {
+    position: absolute;
+    content: '';
+    z-index: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    transition: transform 0.5s ease;
+    /* Плавная анимация */
+}
+
+.swiper_about_btn .active {
+    background: rgba(126, 138, 158, 0);
+    /* Прозрачный фон */
+}
+
+.swiper_about_btn .active::before {
+    transform: translateX(100%);
+    /* Заезд слева */
+}
+
+.swiper_about_btn .active::after {
+    transform: translateX(-100%);
+    /* Заезд справа */
+}
+
+.new_series {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 0 60px;
+}
+
+.new_series .swiper {
+    width: 370px;
+    max-width: 370px;
+    min-height: 300px;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.new_series_content {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.new_series_content div {
+    padding-left: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.new_series_content h2 {
+    font-size: 24px;
+}
+
+.new_series_content div p {
+    font-size: 16px;
+}
+
+.new_series_content div a {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 146px;
+    height: 31px;
+    background: #000;
+    border-radius: 10px;
+    border: 1px solid #858994;
+}
+
+.new_series_content div a::before {
+    content: url(../img/effects/catalog.png);
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+.swiper-pagination {
+    bottom: 0;
+}
+
+.swiper-pagination-bullet {
+    width: 43px;
+    height: 5px;
+    background: #282b30;
+    border-radius: 3px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff;
+}

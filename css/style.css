@@ -94,10 +94,27 @@ header {
     color: #fff;
     font-size: 14px;
     font-weight: 400;
+    transition: color .3s ease;
+}
+
+.catalog_link_footer_info a,
+.center_footer ul li a {
+    transition: color .3s ease;
+}
+
+.center_header ul li a:hover,
+.center_footer ul li a:hover {
+    color: #9aa5bb;
+    transition: color .3s ease;
+}
+
+.catalog_link_footer_info a:hover {
+    color: #fff;
+    transition: color .3s ease;
 }
 
 .center_header ul li .active {
-    color: #5c5859;
+    color: #9aa5bb;
 }
 
 .right_header {
@@ -231,7 +248,7 @@ p {
     width: 100%;
     overflow: hidden;
     position: relative;
-    height: 423px;
+    height: 413px;
 }
 
 .card_slider_content {
@@ -247,6 +264,28 @@ p {
     width: 256px;
     height: 361px;
     flex-direction: column;
+}
+
+.card_slider_btn {
+    transition: top .3s ease;
+}
+
+.productSwiper .card_slider:hover~.card_slider_btn {
+    top: 199px;
+}
+
+.productSwiper .card_slider {
+    position: relative;
+    /* Убедитесь, что элемент имеет позиционирование */
+    top: 0;
+    /* Установите начальное значение top */
+    transition: top .3s ease;
+    /* Плавный переход */
+}
+
+.productSwiper .card_slider:hover {
+    top: -15px;
+    /* Смещение при наведении */
 }
 
 .card_slider_btn {
@@ -710,22 +749,26 @@ p {
     align-items: center;
     justify-content: center;
     gap: 50px;
-    padding: 50px 0 60px;
 }
 
-.new_series .swiper {
-    width: 370px;
-    max-width: 370px;
-    min-height: 300px;
+.new_series .swiper-slide {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+}
+
+.mySwiper {
+    padding: 50px 0 60px;
+    max-width: 950px;
     margin: 0 auto;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 .new_series_content {
     display: flex;
     flex-direction: column;
     gap: 34px;
+    z-index: 9;
 }
 
 .new_series_content div {
@@ -766,8 +809,42 @@ p {
     left: 0;
 }
 
-.swiper-pagination {
-    bottom: 0;
+.mySwiper .swiper-pagination {
+    bottom: 60px;
+    left: 100px;
+    width: unset !important;
+    z-index: 9;
+}
+
+.mySwiper .swiper-slide {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.mySwiper .swiper-slide img {
+    z-index: 9;
+}
+
+.mySwiper .swiper-slide::before {
+    width: 638px;
+    height: 449px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: -40px;
+    top: -120px;
+}
+
+.ns_img_one::before {
+    content: url(../img/swiper/one_fon.png);
+}
+
+.ns_img_two::before {
+    content: url(../img/swiper/two_fon.png);
+}
+
+.ns_img_three::before {
+    content: url(../img/swiper/three_fon.png);
 }
 
 .swiper-pagination-bullet {
@@ -775,6 +852,7 @@ p {
     height: 5px;
     background: #282b30;
     border-radius: 3px;
+    z-index: 9;
 }
 
 .swiper-pagination-bullet-active {
@@ -788,10 +866,14 @@ p {
 .productSwiper {
     width: 100%;
     max-width: 1385px !important;
+    padding-top: 15px;
 }
 
 #product {
     padding-bottom: 108px;
+    background-image: url(../img/bg/product_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .product h3 {
@@ -800,6 +882,54 @@ p {
     margin: 0 auto;
     margin-bottom: 71px;
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 56px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+    background: rgb(148, 158, 172);
+    background: linear-gradient(90deg, rgba(148, 158, 172, 1) 0%, rgba(129, 137, 150, 1) 50%, rgba(88, 95, 105, 1) 100%);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    transition: all .3s ease;
+    background: #fff;
+}
+
+.swiper-button-next:hover img,
+.swiper-button-prev:hover img {
+    display: none;
+    transition: all .3s ease;
+}
+
+.swiper-button-next:hover .hover,
+.swiper-button-prev:hover .hover {
+    display: block;
+}
+
+.swiper-button-prev {
+    border-radius: 0 10px 10px 10px;
+}
+
+.swiper-button-next {
+    border-radius: 10px 0 10px 10px;
+}
+
+.hover {
+    display: none;
+}
+
+.swiper-button-next {}
 
 #contact_forms {
     background-image: url(../img/bg/contact_form.png);
@@ -938,6 +1068,7 @@ p {
 
 .input_box {
     width: 300px;
+    position: relative;
 }
 
 .input_box input,
@@ -950,6 +1081,7 @@ p {
     font-size: 14px;
     font-weight: 500;
     color: #c1cde4;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .input_box label span {
@@ -961,11 +1093,29 @@ p {
     align-items: center;
     background: transparent;
     height: 30px;
+    border: none;
+    /* Убираем стандартный бордер */
     border-bottom: 3px solid rgba(255, 255, 255, 0.5);
     font-family: 'TT Travels';
     font-size: 18px;
     font-weight: 500;
     color: #fff;
+    transition: border-color 0.2s ease;
+}
+
+.input_box input:focus {
+    outline: none;
+    /* Убираем обводку при фокусе */
+    border-bottom: 3px solid #fff;
+    /* Цвет бордера при фокусе */
+}
+
+.input_box input:not(:placeholder-shown)+label,
+.input_box input:focus+label {
+    transform: translateY(-20px);
+    /* Сдвигаем лейбл вверх */
+    color: #fff;
+    /* Изменяем цвет текста лейбла */
 }
 
 .form_btn {
@@ -1561,4 +1711,132 @@ footer {
 
 .footer_bottom p a {
     border-bottom: 2px solid #909bae;
+}
+
+#history_brand {
+    height: 854px;
+    background-image: url(../img/bg/brand_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 122px;
+}
+
+.history_brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.brand_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 513px;
+    z-index: 999;
+}
+
+.brand_title img {
+    margin: 31px 0 42px;
+}
+
+.brand_title p {
+    font-size: 16px;
+    margin-bottom: 49px;
+    line-height: 24px;
+}
+
+.brand_title .call_f_btn {
+    width: 100%;
+    max-width: 146px;
+    height: 31px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.brand_content {
+    position: absolute;
+    display: flex;
+    max-width: 1130px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.brand_card {
+    position: relative;
+}
+
+.brand_card p {
+    color: #909bae;
+    font-size: 14px;
+}
+
+.bc_one {
+    top: 80px;
+    left: 35px;
+}
+
+.bc_one p {
+    max-width: 171px;
+    margin-top: 40px;
+}
+
+.bc_two {
+    left: 140px;
+    top: 535px;
+    max-width: 176px;
+}
+
+.bc_two img {
+    position: absolute;
+    top: -60px;
+    left: -25px;
+}
+
+.bc_three {
+    left: 350px;
+    top: 580px;
+    max-width: 193px;
+}
+
+.bc_three img {
+    position: absolute;
+    top: -60px;
+    left: -25px;
+}
+
+.bc_four {
+    right: -440px;
+    top: 415px;
+    max-width: 176px;
+}
+
+.bc_four img {
+    position: absolute;
+    top: -30px;
+    left: -65px;
+}
+
+.bc_five {
+    right: -350px;
+    top: 225px;
+    max-width: 130px;
+}
+
+.bc_five img {
+    position: absolute;
+    top: -50px;
+    left: -45px;
+}
+
+.bg_btn_w:hover {
+    background: #fff;
+    transition: all .3s ease-in;
+    color: #000;
+}
+
+.bg_btn_w {
+    transition: all .3s ease-in;
 }

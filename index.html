@@ -24,7 +24,7 @@
                 <div class="header">
                     <div class="left_header">
                         <a href="index.html"><img src="img/header/logo_text.png" alt=""></a>
-                        <button><img src="img/header/catalog.png" alt="">Каталог продукции</button>
+                        <button class="bg_btn_w"><img src="img/header/catalog.png" alt="">Каталог продукции</button>
                     </div>
                     <div class="center_header">
                         <ul>
@@ -175,21 +175,42 @@
             <div class="new_series">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./img/swiper/one.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./img/swiper/one.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./img/swiper/one.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./img/swiper/one.png" alt=""></div>
+                        <div class="swiper-slide ns_img_one">
+                            <img src="./img/swiper/one.png" alt="">
+                            <div class="new_series_content">
+                                <h2>Новая серия современного <br> высокотехнологичного радиатора </h2>
+                                <div>
+                                    <p>Радиаторы отопления Sibio <br> Разработаны специально для российских</p>
+                                    <a class="bg_btn_w" href="#">Подробнее <img src="img/header/about_arrow.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ns_img_two">
+                            <img src="./img/swiper/two.png" alt="">
+                            <div class="new_series_content">
+                                <h2>Ассортимент <span style="color: #9aa5bb;">Sibio</span> расширился <br> профессиональным инструментом </h2>
+                                <div>
+                                    <p>для монтажа аксиальных и пресс соединений <br> на трубопроводах различных типов – полимерных, <br> металлополимерных, а также медных и из нержавеющей стали</p>
+                                    <a class="bg_btn_w" href="#">Подробнее <img src="img/header/about_arrow.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ns_img_three">
+                            <img src="./img/swiper/three.png" alt="">
+                            <div class="new_series_content">
+                                <h2>Ассортимент предохранительной <br> арматуры дополнился мембранными <br> редукторами давления </h2>
+                                <div>
+                                    <p>в латунном и никелированном исполнении. Новые редукторы <br> рекомендованы к применению в системах горячего ...</p>
+                                    <a class="bg_btn_w" href="#">Подробнее <img src="img/header/about_arrow.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
 
-                <div class="new_series_content">
-                    <h2>Новая серия современного <br> высокотехнологичного радиатора </h2>
-                    <div>
-                        <p>Радиаторы отопления Sibio <br> Разработаны специально для российских</p>
-                        <a href="#">Подробнее <img src="img/header/about_arrow.png" alt=""></a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -217,7 +238,35 @@
     <section id="history_brand">
         <div class="wrapper">
             <div class="history_brand">
-
+                <div class="brand_title">
+                    <h3>История бренда</h3>
+                    <img src="./img/effects/logo_brand.png" alt="">
+                    <p>Навзание бренда в память об «отце» современных насосных систем, работающих на сжатом воздухе, был создан одноименный бренд,<br> в честь имени Древнегреческого учёного Ктесибия или Сибия</p>
+                    <a class="call_f_btn bg_btn_w" href="">О компании</a>
+                </div>
+                <div class="brand_content ">
+                    <div class="brand_card bc_one">
+                        <img src="./img/brand/one.png" alt="">
+                        <p>Древнегреческий учёный Ктеси́бия или Сибия</p>
+                    </div>
+                    <div class="brand_card bc_two">
+                        <img src="./img/brand/two.png" alt="">
+                        <p>бесперебойные поставки полного ассортимента с крупнейшего склада в Уральском Федеральном округе
+                        </p>
+                    </div>
+                    <div class="brand_card bc_three">
+                        <img src="./img/brand/three.png" alt="">
+                        <p>неизменно высокое качество продукции с длительным сроком гарантии</p>
+                    </div>
+                    <div class="brand_card bc_four">
+                        <img src="./img/brand/four.png" alt="">
+                        <p>новейшие разработки и технологии для создания изделий, уникальных для российского и мирового рынка</p>
+                    </div>
+                    <div class="brand_card bc_five">
+                        <img src="./img/brand/five.png" alt="">
+                        <p>работоспособность в любых условиях</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -229,7 +278,7 @@
                     <div class="swiper-wrapper">
 
                         <div class="swiper-slide">
-                            <div class="card_slider card_slider_orange">
+                            <a href="#" class="card_slider card_slider_orange">
                                 <div class="card_slider_img">
                                     <img src="./img/product/radiator.png" alt="">
                                 </div>
@@ -237,10 +286,10 @@
                                     <h2>Радиатор отопления<br> стальной, универсальный </h2>
                                 </div>
                                 <a class="card_slider_btn" href="#"><img src="./img/effects/orange_card_btn.png" alt=""></a>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card_slider card_slider_blue">
+                            <a href="#" class="card_slider card_slider_blue">
                                 <div class="card_slider_img">
                                     <img src="./img/product/nasos.png" alt="">
                                 </div>
@@ -249,10 +298,10 @@
                                     <h2 style="font-size: 16px;">1BG</h2>
                                 </div>
                                 <a class="card_slider_btn" href="#"><img src="./img/effects/blue_card_btn.png" alt=""></a>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card_slider card_slider_blue">
+                            <a href="#" class="card_slider card_slider_blue">
                                 <div class="card_slider_img">
                                     <img src="./img/product/callector.png" alt="">
                                 </div>
@@ -261,10 +310,10 @@
                                     <h2 style="font-size: 16px;">1BG</h2>
                                 </div>
                                 <a class="card_slider_btn" href="#"><img src="./img/effects/blue_card_btn.png" alt=""></a>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card_slider card_slider_orange">
+                            <a href="#" class="card_slider card_slider_orange">
                                 <div class="card_slider_img">
                                     <img src="./img/product/radiator.png" alt="">
                                 </div>
@@ -272,10 +321,10 @@
                                     <h2>Радиатор отопления<br> стальной, универсальный </h2>
                                 </div>
                                 <a class="card_slider_btn" href="#"><img src="./img/effects/orange_card_btn.png" alt=""></a>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card_slider card_slider_blue">
+                            <a href="#" class="card_slider card_slider_blue">
                                 <div class="card_slider_img">
                                     <img src="./img/product/nasos.png" alt="">
                                 </div>
@@ -284,10 +333,10 @@
                                     <h2 style="font-size: 16px;">1BG</h2>
                                 </div>
                                 <a class="card_slider_btn" href="#"><img src="./img/effects/blue_card_btn.png" alt=""></a>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card_slider card_slider_blue">
+                            <a href="#" class="card_slider card_slider_blue">
                                 <div class="card_slider_img">
                                     <img src="./img/product/callector.png" alt="">
                                 </div>
@@ -296,10 +345,10 @@
                                     <h2 style="font-size: 16px;">1BG</h2>
                                 </div>
                                 <a class="card_slider_btn" href="#"><img src="./img/effects/blue_card_btn.png" alt=""></a>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card_slider card_slider_orange">
+                            <a href="#" class="card_slider card_slider_orange">
                                 <div class="card_slider_img">
                                     <img src="./img/product/radiator.png" alt="">
                                 </div>
@@ -307,10 +356,10 @@
                                     <h2>Радиатор отопления<br> стальной, универсальный </h2>
                                 </div>
                                 <a class="card_slider_btn" href="#"><img src="./img/effects/orange_card_btn.png" alt=""></a>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card_slider card_slider_blue">
+                            <a href="#" class="card_slider card_slider_blue">
                                 <div class="card_slider_img">
                                     <img src="./img/product/nasos.png" alt="">
                                 </div>
@@ -319,10 +368,10 @@
                                     <h2 style="font-size: 16px;">1BG</h2>
                                 </div>
                                 <a class="card_slider_btn" href="#"><img src="./img/effects/blue_card_btn.png" alt=""></a>
-                            </div>
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card_slider card_slider_blue">
+                            <a href="#" class="card_slider card_slider_blue">
                                 <div class="card_slider_img">
                                     <img src="./img/product/callector.png" alt="">
                                 </div>
@@ -331,11 +380,18 @@
                                     <h2 style="font-size: 16px;">1BG</h2>
                                 </div>
                                 <a class="card_slider_btn" href="#"><img src="./img/effects/blue_card_btn.png" alt=""></a>
-                            </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next">
+
+                        <img class="hover" src="./img/swiper/arrow_right.png" alt="">
+                        <img src="./img/swiper/arrow_right_wh.png" alt="">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img class="hover" src="./img/swiper/arrow_left.png" alt="">
+                        <img src="./img/swiper/arrow_left_wh.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -371,26 +427,20 @@
                             <form id="form_opt" action="" class="active">
                                 <div class="input_content">
                                     <div class="input_box">
-                                        <label for="">Название организации <br>
-                                            или индивидуального предпринимателя
-                                            
-                                            </label>
-                                        <input type="text">
+                                        <label for="">Название организации <br> или индивидуального предпринимателя</label>
+                                        <input type="text" placeholder=" ">
                                     </div>
                                     <div class="input_box">
-                                        <label for="">Ваш город или населённый пункт <span>*</span>  </label>
-                                        <input type="text">
+                                        <label for="">Ваш город или населённый пункт <span>*</span></label>
+                                        <input type="text" placeholder=" ">
                                     </div>
                                     <div class="input_box">
-                                        <label for="">Номер телефона или e-mail для связи <span>*</span>  </label>
-                                        <input type="text">
+                                        <label for="">Номер телефона или e-mail для связи <span>*</span></label>
+                                        <input type="text" placeholder=" ">
                                     </div>
                                     <div class="input_box">
-                                        <label for="">Род деятельности или предполагаемые<br>
-                                            каналы сбыта 
-                                            
-                                            <span>*</span></label>
-                                        <input type="text">
+                                        <label for="">Род деятельности или предполагаемые<br> каналы сбыта <span>*</span></label>
+                                        <input type="text" placeholder=" ">
                                     </div>
                                 </div>
                                 <div class="form_btn">
@@ -398,6 +448,7 @@
                                     <p>Нажимая на кнопку <span>«Оставить заявку»</span><br> Вы выражаете своё <a href="#">согласие</a> на обработку <br> Ваших персональных данных</p>
                                 </div>
                             </form>
+
 
                             <form id="form_proj" action="" style="display: none;">
                                 <div class="input_content">
@@ -490,6 +541,19 @@
                                 </div>
                             </form>
                         </div>
+                        <script>
+                            document.querySelectorAll('.input_box input').forEach(input => {
+                                input.addEventListener('focus', () => {
+                                    input.classList.add('focused');
+                                });
+
+                                input.addEventListener('blur', () => {
+                                    if (!input.value) {
+                                        input.classList.remove('focused');
+                                    }
+                                });
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
@@ -518,7 +582,7 @@
                 <div class="news_info">
                     <h3>Новости</h3>
                     <p>Актуальные события бренда <br> Sibio и нашей компании </p>
-                    <a href="#">Смотреть все новости <img src="img/header/about_arrow.png" alt=""></a>
+                    <a class="bg_btn_w" href="#">Смотреть все новости <img src="img/header/about_arrow.png" alt=""></a>
                 </div>
                 <div class="news_content">
                     <a href="#" class="news_card">
@@ -589,7 +653,7 @@
                     <div class="right_top_footer">
                         <p>Телефон</p>
                         <a class="number_href" href="tel:+73472460746">+7 (347) 246-07-46</a>
-                        <a class="call_f_btn" href="#">Заказать звонок <img src="img/header/about_arrow.png" alt=""></a>
+                        <a class="call_f_btn bg_btn_w" href="#">Заказать звонок <img src="img/header/about_arrow.png" alt=""></a>
                     </div>
                     <div class="right_center_footer">
                         <img src="./img/footer/mail.png" alt="">

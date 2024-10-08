@@ -27,3 +27,14 @@ $(document).ready(function() {
         }, 200);
     });
 });
+document.querySelectorAll('.input_box input').forEach(input => {
+    input.addEventListener('focus', () => {
+        input.classList.add('focused');
+    });
+
+    input.addEventListener('blur', () => {
+        if (!input.value) {
+            input.classList.remove('focused');
+        }
+    });
+});

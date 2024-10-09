@@ -154,7 +154,7 @@ header {
     gap: 10px;
 }
 
-.basket a {
+.basket .basket_name {
     font-size: 14px;
     font-weight: 400;
     color: #fff;
@@ -1869,5 +1869,9 @@ footer {
 }
 
 .bg_btn_w_none {
+    display: none;
+}
+
+.mob_catalog_btn {
     display: none;
 }

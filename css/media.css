@@ -7,11 +7,10 @@
     #product,
     #history_brand,
     #production,
-    #about {
+    #about,
+    #consultation,
+    #news {
         display: block !important;
-    }
-    footer {
-        display: none;
     }
     header {
         display: none;
@@ -241,12 +240,20 @@
         flex-direction: column;
         gap: 30px;
     }
+    .left_contact,
+    .left_content_btn {
+        width: 100%;
+    }
     .left_content_btn {
         flex-direction: row;
         overflow-y: scroll;
         /* Скрытие полосы прокрутки */
         scrollbar-width: none;
         /* Для Firefox */
+        padding-right: 30px;
+    }
+    .left_contact {
+        padding-left: 30px;
     }
     .left_content_btn::-webkit-scrollbar {
         display: none;
@@ -288,6 +295,107 @@
     }
     .form_btn {
         gap: 20px;
+    }
+    .consult_contact_box {
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+        margin-top: 10px;
+    }
+    #consultation {
+        overflow-x: clip;
+        height: auto;
+        padding-bottom: 120px;
+    }
+    .consultation::after {
+        max-width: 214px;
+        max-height: 214px;
+        top: -200px;
+        right: -20px;
+    }
+    .consult_info {
+        padding: 20px 30px 0 30px;
+    }
+    .consult_info {
+        gap: 20px;
+    }
+    .news_info .bg_btn_w,
+    .news_info p {
+        display: none;
+    }
+    .news {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .news_content .news_card:nth-child(2),
+    .news_content .news_card:nth-child(3) {
+        display: none;
+    }
+    #news {
+        padding: 50px 30px 50px 30px;
+    }
+    .news_info {
+        padding-top: 0;
+    }
+    .news_info h3 {
+        font-size: 30px;
+    }
+    .bg_btn_w_none {
+        position: relative;
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        width: 206px;
+        height: 31px;
+        background: transparent;
+        border-radius: 10px;
+        border: 1px solid #858994;
+        margin-top: 8px;
+    }
+    .bg_btn_w_none::before {
+        content: url(../img/effects/catalog.png);
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+    footer {
+        padding: 60px 30px 0 30px;
+        height: auto;
+    }
+    .footer,
+    .footer_bottom {
+        flex-direction: column;
+        align-items: start;
+    }
+    .footer,
+    .left_footer {
+        gap: 43px;
+    }
+    .center_footer ul {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .catalog_links_footer {
+        order: -1;
+    }
+    .center_footer {
+        order: 1;
+        gap: 43px;
+    }
+    #footer_bottom {
+        height: auto;
+    }
+    .footer_bottom {
+        padding: 43px 0 60px;
+        gap: 20px;
+    }
+    .footer_bottom a {
+        order: -1;
+        margin-bottom: 10px;
     }
 }
 

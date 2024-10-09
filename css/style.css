@@ -1343,11 +1343,18 @@ p {
 }
 
 .consultation::after {
-    content: url(../img/effects/consultation.png);
+    content: '';
     position: absolute;
     z-index: 100;
     right: 0;
     top: -200px;
+    background-image: url(../img/effects/consultation.png);
+    background-size: contain;
+    /* или cover, в зависимости от ваших нужд */
+    width: 444px;
+    /* Укажите нужную ширину */
+    height: 444px;
+    /* Укажите нужную высоту */
 }
 
 .consult_info {
@@ -1859,4 +1866,8 @@ footer {
 
 .bg_btn_w {
     transition: all .3s ease-in;
+}
+
+.bg_btn_w_none {
+    display: none;
 }

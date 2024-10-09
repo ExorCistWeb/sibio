@@ -1501,14 +1501,25 @@ p {
     width: 322px;
     height: 415px;
     display: flex;
-    z-index: 2;
+    z-index: 99;
     flex-direction: column;
     padding: 53px 50px 33px 50px;
     background: url(../img/effects/new_card.png);
+    transition: all .3s ease-in-out;
 }
 
-.news_card::before {
-    content: url(../img/effects/new_card_shodow.png);
+.news_card:hover {
+    transition: all .3s ease-in-out;
+    z-index: 999;
+    background: url(../img/effects/hover_new_card.png);
+}
+
+.news_card:hover p {
+    color: #000;
+}
+
+.news_card::after {
+    /* content: url(../img/effects/new_card_shodow.png); */
     position: absolute;
     z-index: -1;
     top: 161px;

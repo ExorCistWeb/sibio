@@ -1,5 +1,6 @@
 @media (max-width:440px) {
-    section {
+    section,
+    #production::before {
         display: none !important;
     }
     #contact_forms,
@@ -18,14 +19,12 @@
     #about {
         overflow-x: hidden;
     }
-    .about {
-        padding-top: 50px
-    }
     .card_slider_content {
         display: none;
     }
     .about_title {
         margin-left: 0;
+        margin-top: 30px;
     }
     .s_content {
         width: 123%;
@@ -230,6 +229,7 @@
     }
     #product {
         padding: 50px 0 60px;
+        margin-top: 50px;
     }
     .product h3 {
         margin-left: 40px;

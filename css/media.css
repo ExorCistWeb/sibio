@@ -440,6 +440,10 @@
         order: -1;
         margin-bottom: 10px;
     }
+    h1 {
+        font-size: 24px;
+        max-width: 250px;
+    }
 }
 
 .mob_contact_link {

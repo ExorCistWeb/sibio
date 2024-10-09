@@ -38,3 +38,42 @@ document.querySelectorAll('.input_box input').forEach(input => {
         }
     });
 });
+$(document).ready(function() {
+    // По клику на любую кнопку с классом .btn_catalog
+    $('.btn_catalog').on('click', function() {
+        var menu = $('.menu_catalog');
+
+        // Проверяем, открыто ли меню
+        if (menu.is(':visible')) {
+            // Анимация закрытия: перемещение вправо и уменьшение высоты
+            menu.animate({
+                opacity: 0,
+                right: '-100px',
+                top: '-100px',
+                height: '0px',
+                padding: '0px'
+            }, 600, function() {
+                menu.hide(); // Скрываем меню после анимации
+            });
+        } else {
+            // Сбросим стиль и отобразим перед открытием
+            menu.css({
+                display: 'flex', // Отображаем меню перед анимацией
+                opacity: 0,
+                right: '0',
+                top: '40px',
+                height: '0px',
+                padding: '0px'
+            });
+
+            // Анимация открытия: возвращаем к исходным размерам и позиции
+            menu.animate({
+                opacity: 1,
+                right: '0px',
+                top: '40px',
+                height: '662px',
+                padding: '70px 70px 68px 73px'
+            }, 600);
+        }
+    });
+});

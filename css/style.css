@@ -45,7 +45,7 @@ body {
 
 header {
     padding: 50px 0 0;
-    z-index: 9999;
+    z-index: 9990;
     position: relative;
 }
 
@@ -63,6 +63,7 @@ header {
 
 .left_header button {
     position: relative;
+    z-index: 9993;
     font-size: 14px;
     font-weight: 400;
     color: #fff;
@@ -1874,4 +1875,113 @@ footer {
 
 .mob_catalog_btn {
     display: none;
+}
+
+.catalog_wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+}
+
+.menu_catalog {
+    position: absolute;
+    width: 100%;
+    max-width: 1411px;
+    right: 0;
+    top: 40px;
+    background: url(../img/bg/catalog_menu.png);
+    border-radius: 14px;
+    height: 662px;
+    z-index: 9991;
+    padding: 70px 70px 68px 73px;
+    display: none;
+    /* Скрываем блок изначально */
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.catalog_box {
+    position: relative;
+    width: 100%;
+    max-width: 180px;
+    z-index: 999;
+}
+
+.catalog_box:nth-child(2),
+.catalog_box:nth-child(8) {
+    width: 150px;
+}
+
+.catalog_box:nth-child(4),
+.catalog_box:nth-child(10) {
+    width: 140px;
+}
+
+.catalog_box:nth-child(2)::after {
+    display: none;
+}
+
+.catalog_box:nth-child(8)::after {
+    display: none;
+}
+
+.catalog_box::after {
+    content: url(../img/effects/catalog_menu.png);
+    position: absolute;
+    top: -20px;
+    left: -81px;
+    z-index: -1;
+}
+
+.catalog_box h4 a {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 15px;
+    font-family: 'TT Norms Pro';
+    margin-bottom: 27px;
+    display: block;
+    height: 30px;
+}
+
+.catalog_box a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #73767f;
+    line-height: 16px;
+    font-family: 'TT Norms Pro';
+    margin-top: 10px;
+    display: block;
+    max-width: 170px;
+}
+
+.catalog_box a:nth-child(1) {
+    margin-top: 0;
+}
+
+.menu_catalog .bg_btn_w {
+    position: absolute;
+    z-index: 9993;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 192px;
+    height: 31px;
+    background: #000;
+    border-radius: 10px;
+    border: 1px solid #858994;
+    top: 10px;
+    left: 5px;
+}
+
+.menu_catalog .bg_btn_w::before {
+    content: url(../img/effects/catalog.png);
+    display: block;
+    position: absolute;
+    left: 0;
 }

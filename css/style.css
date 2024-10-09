@@ -929,8 +929,6 @@ p {
     display: none;
 }
 
-.swiper-button-next {}
-
 #contact_forms {
     background-image: url(../img/bg/contact_form.png);
     background-repeat: no-repeat;
@@ -965,6 +963,13 @@ p {
     width: 480px;
     gap: 20px;
     padding-left: 60px;
+}
+
+.left_content_btn {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    gap: 20px;
 }
 
 .left_contact button {
@@ -1776,6 +1781,10 @@ footer {
 .bc_one {
     top: 80px;
     left: 35px;
+}
+
+.bc_one_mob {
+    display: none;
 }
 
 .bc_one p {

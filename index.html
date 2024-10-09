@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -244,8 +245,12 @@
                     <p>Навзание бренда в память об «отце» современных насосных систем, работающих на сжатом воздухе, был создан одноименный бренд,<br> в честь имени Древнегреческого учёного Ктесибия или Сибия</p>
                     <a class="call_f_btn bg_btn_w" href="">О компании</a>
                 </div>
+                <div class="brand_card bc_one bc_one_mob">
+                    <img src="./img/brand/one.png" alt="">
+                    <p>Древнегреческий учёный Ктеси́бия или Сибия</p>
+                </div>
                 <div class="brand_content ">
-                    <div class="brand_card bc_one">
+                    <div class="brand_card bc_one bc_one_pc">
                         <img src="./img/brand/one.png" alt="">
                         <p>Древнегреческий учёный Ктеси́бия или Сибия</p>
                     </div>
@@ -383,14 +388,16 @@
                             </a>
                         </div>
                     </div>
-                    <div class="swiper-button-next">
+                    <div class="btn_mob">
+                        <div class="swiper-button-next">
 
-                        <img class="hover" src="./img/swiper/arrow_right.png" alt="">
-                        <img src="./img/swiper/arrow_right_wh.png" alt="">
-                    </div>
-                    <div class="swiper-button-prev">
-                        <img class="hover" src="./img/swiper/arrow_left.png" alt="">
-                        <img src="./img/swiper/arrow_left_wh.png" alt="">
+                            <img class="hover" src="./img/swiper/arrow_right.png" alt="">
+                            <img src="./img/swiper/arrow_right_wh.png" alt="">
+                        </div>
+                        <div class="swiper-button-prev">
+                            <img class="hover" src="./img/swiper/arrow_left.png" alt="">
+                            <img src="./img/swiper/arrow_left_wh.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -400,20 +407,22 @@
         <div class="wrapper">
             <div class="contact_forms">
                 <div class="left_contact">
-                    <button class="active" data-form="form_opt" data-title="Оптовым клиентам" data-text="Мы предлагаем большой ассортимент нашей продукции с гарантией">
-                        <img src="./img/swiper/arrow_right.png" alt="">Оптовым клиентам
-                    </button>
-                    <button data-form="form_proj" data-title="Проектировщикам" data-text="Мы предлагаем уникальные решения для проектирования.">
-                        <img src="./img/swiper/arrow_right.png" alt="">Проектировщикам
-                    </button>
-                    <button data-form="form_mont" data-title="Монтажникам" data-text="У нас есть специальные предложения для монтажников.">
-                        <img src="./img/swiper/arrow_right.png" alt="">Монтажникам
-                    </button>
-                    <button data-form="form_priv" data-title="Частным клиентам" data-text="Мы работаем и с частными клиентами, предлагая выгодные условия.">
-                        <img src="./img/swiper/arrow_right.png" alt="">Частным клиентам
-                    </button>
+                    <div class="left_content_btn">
+                        <button class="active" data-form="form_opt" data-title="Оптовым клиентам" data-text="Мы предлагаем большой ассортимент нашей продукции с гарантией">
+                            <img src="./img/swiper/arrow_right.png" alt="">Оптовым клиентам
+                        </button>
+                        <button data-form="form_proj" data-title="Проектировщикам" data-text="Мы предлагаем уникальные решения для проектирования.">
+                            <img src="./img/swiper/arrow_right.png" alt="">Проектировщикам
+                        </button>
+                        <button data-form="form_mont" data-title="Монтажникам" data-text="У нас есть специальные предложения для монтажников.">
+                            <img src="./img/swiper/arrow_right.png" alt="">Монтажникам
+                        </button>
+                        <button data-form="form_priv" data-title="Частным клиентам" data-text="Мы работаем и с частными клиентами, предлагая выгодные условия.">
+                            <img src="./img/swiper/arrow_right.png" alt="">Частным клиентам
+                        </button>
+                    </div>
 
-                    <div class="contact_link">
+                    <div class="contact_link pc_contact_link">
                         <p>Открыты для Ваших обращений</p>
                         <a href="tel:+73472460746">+7 (347) 246-07-46</a>
                     </div>
@@ -422,6 +431,10 @@
                     <div class="opt_form">
                         <h3 class="form_title">Оптовым клиентам</h3>
                         <p class="form_text">Мы предлагаем большой ассортимент нашей продукции с гарантией</p>
+                        <div class="contact_link mob_contact_link">
+                            <p>Открыты для Ваших обращений</p>
+                            <a href="tel:+73472460746">+7 (347) 246-07-46</a>
+                        </div>
                         <div class="contact_form">
 
                             <form id="form_opt" action="" class="active">

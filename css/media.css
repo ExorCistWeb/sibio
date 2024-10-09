@@ -1,0 +1,296 @@
+@media (max-width:440px) {
+    section {
+        display: none !important;
+    }
+    #contact_forms,
+    #product,
+    #history_brand,
+    #production,
+    #about {
+        display: block !important;
+    }
+    footer {
+        display: none;
+    }
+    header {
+        display: none;
+    }
+    #about {
+        overflow-x: hidden;
+    }
+    .about {
+        padding-top: 50px
+    }
+    .card_slider_content {
+        display: none;
+    }
+    .about_title {
+        margin-left: 0;
+    }
+    .s_content {
+        width: 123%;
+    }
+    .s_content img {
+        z-index: 0;
+        right: -130px;
+    }
+    .about {
+        padding: 0 15px;
+    }
+    .about_title {
+        position: relative;
+        z-index: 3;
+        padding: 0 15px 10px 15px;
+    }
+    .about_title p {
+        display: none;
+    }
+    .mySwiper .swiper-slide {
+        flex-direction: column;
+        padding: 0 40px;
+    }
+    .swiper_about {
+        padding: 0 40px;
+    }
+    .new_series_content div {
+        padding-left: 0;
+    }
+    .new_series_content {
+        gap: 25px;
+    }
+    .new_series_content div {
+        gap: 34px;
+    }
+    .mySwiper .swiper-pagination {
+        top: 320px;
+        left: 130px;
+        bottom: unset;
+    }
+    #production {
+        height: unset;
+        padding-top: 60px;
+    }
+    .production {
+        flex-direction: column;
+        padding: 60px 10px 300px 30px;
+        gap: 30px;
+    }
+    .video_box {
+        padding-right: 20px;
+    }
+    .s_content img {
+        width: 100%;
+    }
+    .production_title {
+        order: 1;
+        padding-left: 60px;
+        margin-left: 0;
+        position: relative;
+        margin-top: 20px;
+    }
+    .production_exp {
+        padding-top: 0;
+    }
+    .video_box p,
+    .production_title p {
+        padding-left: 0;
+    }
+    .production_title::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .production_title h2 {
+        font-size: 20px;
+    }
+    .production_title p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .video_box {
+        position: unset;
+    }
+    .video_box::before {
+        left: 20px;
+        right: unset;
+        bottom: -8px;
+    }
+    #history_brand {
+        padding-bottom: 60px;
+    }
+    .brand_content {
+        position: relative;
+    }
+    .brand_title {
+        padding: 0 40px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .brand_title p br {
+        display: none;
+    }
+    .brand_title p {
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 40px;
+    }
+    .brand_title img {
+        width: 200px;
+        margin: 20px 0 30px;
+    }
+    .brand_content {
+        overflow-x: scroll;
+        /* Оставляем прокрутку */
+        overflow-y: hidden;
+        /* Скрываем вертикальную прокрутку */
+        margin-top: 0;
+        padding-top: 100px;
+        padding-left: 60px;
+        padding-right: 60px;
+        gap: 40px;
+        /* Скрытие полосы прокрутки */
+        scrollbar-width: none;
+        /* Для Firefox */
+    }
+    .brand_content::-webkit-scrollbar {
+        display: none;
+        /* Для Chrome, Safari и Edge */
+    }
+    .brand_card {
+        left: 0 !important;
+        right: 0 !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        min-width: 200px;
+    }
+    .bc_one_pc {
+        display: none;
+    }
+    .brand_content .brand_card img {
+        top: -60px;
+        left: -25px;
+    }
+    .bc_one_mob {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .bc_one_mob img {
+        width: 130px;
+    }
+    .bc_one_mob p {
+        margin-top: 30px;
+        padding-left: 50px;
+        font-size: 12px;
+        max-width: 200px;
+    }
+    .productSwiper .swiper-wrapper {
+        padding: 0 40px;
+    }
+    .productSwiper .swiper-wrapper .swiper-slide {
+        width: 185px;
+    }
+    .card_slider {
+        width: 185px;
+        background: url(../img/effects/ab_card_mob.png);
+    }
+    .card_slider_img {
+        width: 100%;
+        height: 186px;
+    }
+    .card_slider_img img {
+        width: 75%;
+    }
+    .card_slider_info {
+        background-image: none !important;
+        padding: 10px;
+    }
+    .card_slider_btn {
+        top: 20px;
+        right: 20px;
+    }
+    .productSwiper .card_slider:hover~.card_slider_btn {
+        top: 0;
+    }
+    .productSwiper {
+        padding-right: 80px;
+        padding-bottom: 90px;
+    }
+    .btn_mob {
+        position: absolute;
+        bottom: 0;
+        height: 27px;
+        width: 100%;
+    }
+    .swiper-button-next {
+        right: 15px;
+    }
+    #product {
+        padding: 50px 0 60px;
+    }
+    .product h3 {
+        margin-left: 40px;
+        max-width: 200px;
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    .contact_forms {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .left_content_btn {
+        flex-direction: row;
+        overflow-y: scroll;
+        /* Скрытие полосы прокрутки */
+        scrollbar-width: none;
+        /* Для Firefox */
+    }
+    .left_content_btn::-webkit-scrollbar {
+        display: none;
+        /* Для Chrome, Safari и Edge */
+    }
+    .left_content_btn button {
+        width: 100%;
+        min-width: 227px;
+    }
+    .pc_contact_link {
+        display: none;
+    }
+    .mob_contact_link {
+        display: flex !important;
+    }
+    .form_opt,
+    .form_btn {
+        flex-direction: column;
+    }
+    #contact_forms {
+        overflow-x: hidden;
+        padding: 20px 0 100px;
+    }
+    .contact_form {
+        background-size: cover;
+        padding: 50px 20px;
+        gap: 50px;
+    }
+    .contact_form,
+    .right_contact {
+        width: 100%;
+        height: auto;
+    }
+    .right_contact {
+        padding: 0 30px
+    }
+    .form_title {
+        font-size: 22px;
+    }
+    .form_btn {
+        gap: 20px;
+    }
+}
+
+.mob_contact_link {
+    display: none;
+}

@@ -1,3 +1,9 @@
+@media (max-width:1480px) {
+    .wrapper {
+        padding: 0 40px;
+    }
+}
+
 @media (max-width:440px) {
     section,
     #production::before {

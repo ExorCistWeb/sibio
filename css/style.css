@@ -2176,3 +2176,64 @@ h5.accordion.active::after {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+/* НОВОСТИ */
+
+.news_page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 100px 88px 200px 88px;
+}
+
+.news_page .news_info {
+    text-align: start;
+    position: relative;
+    width: 322px;
+    height: 415px;
+    display: flex;
+    z-index: 99;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link_info {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.link_info a {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: unset;
+    height: unset;
+    font-size: 12px;
+    font-family: 'TT Norms Pro';
+}
+
+.active_link {
+    color: #fff;
+}
+
+.open_link {
+    color: #6f6a6c !important;
+    position: relative;
+    padding-left: 11px !important;
+}
+
+.open_link::before {
+    position: relative;
+    display: block !important;
+    content: '/' !important;
+    color: #6f6a6c !important;
+    font-family: 'TT Travels';
+    font-weight: 600;
+}
+
+.link_info a::before {
+    display: none;
+}

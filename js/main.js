@@ -77,3 +77,19 @@ $(document).ready(function() {
         }
     });
 });
+
+$(document).ready(function() {
+    // Открытие/закрытие меню
+    $('.mobile_menu_toggle').click(function() {
+        $('.mobile_menu').fadeToggle(300); // Плавное открытие/закрытие меню
+
+        // Переключаем класс, чтобы блокировать прокрутку у body
+        $('body').toggleClass('no_scroll');
+    });
+
+    // Аккордеоны для разделов меню
+    $('.accordion').click(function() {
+        $(this).toggleClass('active');
+        $(this).next('.panel').slideToggle(300); // Плавное открытие/закрытие аккордеона
+    });
+});

@@ -1522,7 +1522,21 @@ p {
     background: url(../img/effects/hover_new_card.png);
 }
 
+.news_card_flex:hover {
+    transition: all .3s ease-in-out;
+    z-index: 999;
+    background: url(../img/effects/hover_new_card_flex.png);
+}
+
 .news_card:hover p {
+    color: #000;
+}
+
+.news_card:hover img {
+    opacity: .45;
+}
+
+.news_card:hover .bottom_news_card span {
     color: #000;
 }
 
@@ -1552,17 +1566,25 @@ p {
     font-weight: 500;
 }
 
-.news_card span {
+.news_card .bottom_news_card {
     position: absolute;
-    bottom: 33px;
-    right: 68px;
-    width: 9px;
-    height: 7px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
 }
 
-.news_card span img {
-    width: 100%;
-    height: 100%;
+.news_card .bottom_news_card span {
+    font-size: 12px;
+    font-family: 'TT Norms Pro';
+    color: #858994;
+    font-weight: 500;
+}
+
+.news_card .bottom_news_card img {
+    width: 9px;
+    height: 7px;
 }
 
 footer {
@@ -2180,6 +2202,13 @@ h5.accordion.active::after {
 
 /* НОВОСТИ */
 
+#news_page {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url(../img/bg/news_bg.png);
+}
+
 .news_page {
     display: flex;
     flex-wrap: wrap;
@@ -2196,6 +2225,27 @@ h5.accordion.active::after {
     z-index: 99;
     flex-direction: column;
     gap: 20px;
+}
+
+.news_card_no_img {
+    position: relative;
+    overflow: hidden;
+    padding-right: 20px;
+    padding-top: 120px;
+}
+
+.news_card_no_img p {
+    padding-right: 20px;
+}
+
+.news_card_no_img::before {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    content: url(../img/news/no_img.png);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .link_info {
@@ -2236,4 +2286,21 @@ h5.accordion.active::after {
 
 .link_info a::before {
     display: none;
+}
+
+.news_card_flex {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    width: 685px;
+    background-image: url(../img/effects/new_card_flex.png);
+}
+
+.news_card_flex h2 {
+    margin-top: 0;
+}
+
+.news_card_flex img {
+    width: 317px;
+    height: 304px;
 }

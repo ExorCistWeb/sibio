@@ -2304,3 +2304,267 @@ h5.accordion.active::after {
     width: 317px;
     height: 304px;
 }
+
+
+/* Каталог */
+
+.top_background {
+    width: 100%;
+    height: 296px;
+    position: absolute;
+    top: 0;
+    display: block;
+}
+
+.top_background img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.head_page_info {
+    padding-top: 50px;
+}
+
+.head_page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.links_info {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.links_info a {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: unset;
+    height: unset;
+    font-size: 12px;
+    font-family: 'TT Norms Pro';
+    color: #fff;
+    display: flex;
+}
+
+.links_info a:last-child {
+    color: #6f6a6c !important;
+    position: relative;
+    padding-right: 11px;
+}
+
+.links_info a:last-child::after {
+    display: none !important;
+}
+
+.links_info a::after {
+    position: relative;
+    display: block !important;
+    content: '/' !important;
+    color: #6f6a6c !important;
+    font-family: 'TT Travels';
+    font-weight: 600;
+    margin-left: 11px;
+}
+
+.info_page {
+    width: 100%;
+    padding-right: 215px;
+}
+
+.info_page p {
+    max-width: 668px;
+    float: right;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.info_page p span {
+    color: #9c9fb2;
+}
+
+.catalog_page {
+    padding: 63px 80px 115px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 42px 18px;
+}
+
+.catalog_card {
+    position: relative;
+    width: 686px;
+    height: 359px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../img/catalog/catalog_card.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.catalog_card::after,
+.catalog_card::before {
+    position: absolute;
+    z-index: -0;
+    display: block;
+    opacity: 0;
+    /* Изначально скрыто */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: scale(0.95);
+    /* Добавляем легкое уменьшение */
+}
+
+.catalog_card::after {
+    top: -101px;
+    left: -103px;
+    content: '';
+    /* Оставляем пустым контент */
+}
+
+.catalog_card::before {
+    bottom: -155px;
+    right: -130px;
+    content: '';
+    /* Оставляем пустым контент */
+}
+
+
+/* Hover effects with transitions */
+
+.red_hover:hover::after {
+    content: url(../img/catalog/red.png);
+    /* Задаем картинку */
+    opacity: 1;
+    /* Плавное появление */
+    transform: scale(1);
+    /* Возвращаемся к нормальному размеру */
+}
+
+.orange_hover:hover::after {
+    content: url(../img/catalog/orange.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.blue_hover:hover::after {
+    content: url(../img/catalog/blue.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.blue_two_hover:hover::after {
+    content: url(../img/catalog/blue_two.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.violet_hover:hover::after {
+    content: url(../img/catalog/violet.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.green_hover:hover::after {
+    content: url(../img/catalog/green.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Hover before effects with transitions */
+
+.red_hover:hover::before {
+    content: url(../img/catalog/red_two.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.orange_hover:hover::before {
+    content: url(../img/catalog/orange_two.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.blue_hover:hover::before {
+    content: url(../img/catalog/blue_three.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.blue_two_hover:hover::before {
+    content: url(../img/catalog/blue_four.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.violet_hover:hover::before {
+    content: url(../img/catalog/violet_two.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.green_hover:hover::before {
+    content: url(../img/catalog/green_two.png);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.catalog_info {
+    padding: 67px 0 37px 83px;
+    z-index: 3;
+}
+
+.catalog_info h2 {
+    font-size: 24px;
+    line-height: 24px;
+    height: 74px;
+    margin-bottom: 25px;
+    font-family: 'TT Norms Pro';
+    font-weight: 400;
+}
+
+.catalog_info ol {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.catalog_info a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #bdbfc5;
+    font-family: 'TT Norms Pro';
+    transition: color .3s ease;
+}
+
+.catalog_info a:hover {
+    color: #fff;
+    transition: color .3s ease;
+}
+
+.catalog_img {
+    width: 100%;
+    max-width: 315px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.catalog_img img {
+    object-fit: none;
+    width: 100%;
+    height: 100%;
+}
+
+.more_link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}

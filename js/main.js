@@ -93,3 +93,13 @@ $(document).ready(function() {
         $(this).next('.panel').slideToggle(300); // Плавное открытие/закрытие аккордеона
     });
 });
+
+// Поиск кол-во
+function changeQuantity(amount) {
+    let input = document.getElementById("quantity-input");
+    let currentValue = parseInt(input.value);
+
+    if (currentValue + amount >= 1) { // Минимум 1
+        input.value = currentValue + amount;
+    }
+}

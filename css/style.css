@@ -2578,8 +2578,20 @@ h5.accordion.active::after {
 
 /* ПОИСК */
 
+#search_page {
+    background-image: url(../img/search/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+}
+
 #search_page .top_background {
-    height: 457px;
+    height: 487px;
+}
+
+#search_page .head_page_info {
+    margin-bottom: 60px;
 }
 
 .search_form {
@@ -2648,16 +2660,297 @@ h5.accordion.active::after {
     font-size: 24px;
 }
 
-.search_page {
-    background-image: url(../img/search/bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding-top: 75px;
-}
-
 .search_page_content {
     width: 100%;
     max-width: 1053px;
-    padding-left: 90px;
+    margin-left: 90px;
+    padding-bottom: 130px;
+}
+
+.search_page_content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.search_product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.search_product_parametrs,
+.search_product_info,
+.redact_sum,
+.quantity,
+.search_button {
+    display: flex;
+    align-items: center;
+}
+
+.search_product_info {
+    gap: 38px;
+}
+
+.search_product_info_img {
+    min-width: 176px;
+    min-height: 122px;
+    max-width: 176px;
+    max-height: 122px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orange_product {
+    background-image: url(../img/search/orange_product.png);
+}
+
+.blue_product {
+    background-image: url(../img/search/blue_product.png);
+}
+
+.search_product_info_title {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 185px;
+}
+
+.search_product_info_title h3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: auto;
+    font-family: 'TT Travels';
+}
+
+.search_product_info_title p {
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+    color: #909bae;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.price span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: auto;
+    color: #fff;
+    font-family: 'TT Norms Pro';
+}
+
+.price span.action {
+    font-size: 14px;
+    color: #909bae;
+    text-decoration: line-through;
+}
+
+.redact_sum {
+    gap: 13px;
+}
+
+.redact_sum p {
+    font-family: 'TT Norms Pro';
+    font-size: 14px;
+    color: #909bae;
+}
+
+.redact_sum {
+    margin: 0 50px;
+}
+
+.quantity {
+    width: 98px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.quantity input {
+    width: 57px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    outline: none;
+    font-family: 'TT Norms Pro';
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    background: rgba(255, 255, 255, .32);
+}
+
+.quantity button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    background: none;
+    outline: none;
+    font-family: 'TT Norms Pro';
+}
+
+.minus-btn {
+    padding-bottom: 18px;
+}
+
+.plus-btn {
+    padding-bottom: 3px;
+}
+
+.btn_basket {
+    width: 91px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+    margin-right: 13px;
+}
+
+.orange_btn {
+    background-image: url(../img/search/orange_btn.png);
+}
+
+.blue_btn {
+    background-image: url(../img/search/blue_btn.png);
+}
+
+.btn_one_click {
+    width: 125px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+}
+
+.btn_one_click::before {
+    content: url(../img/search/btn_bg.png);
+    position: absolute;
+    z-index: 0;
+    left: 0;
+}
+
+.search_news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.search_news_info {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 831px;
+}
+
+.search_news_info .title_link {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    line-height: auto;
+    text-decoration: underline;
+}
+
+.search_news_info .title_link:hover {
+    color: #909bae;
+    text-decoration: none;
+}
+
+.search_news_info p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'TT Norms Pro';
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+
+.search_news_btn button {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'TT Norms Pro';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    border-radius: 8px;
+    background: none;
+    width: 146px;
+    height: 31px;
+    border: 1px solid rgba(255, 255, 255, .32);
+}
+
+.more_news {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'TT Norms Pro';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    border-radius: 8px;
+    background: none;
+    width: 100%;
+    overflow: hidden;
+    height: 31px;
+    transition: all .3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, .32);
+}
+
+.more_news:hover {
+    transition: all .3s ease-in-out;
+    color: #000;
+    background: #fff;
+    font-weight: 500;
+}
+
+.more_news::before {
+    content: url(../img/search/btn_bg2.png);
+    position: absolute;
+    z-index: 0;
+    left: 0;
 }

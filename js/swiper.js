@@ -131,3 +131,17 @@ var swiper = new Swiper(".productSwiper", {
         },
     },
 });
+
+var swiper = new Swiper(".detalInfoSwiper", {
+
+    centeredSlides: true,
+    autoplay: {
+        delay: 8000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+});

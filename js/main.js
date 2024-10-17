@@ -103,3 +103,34 @@ function changeQuantity(amount) {
         input.value = currentValue + amount;
     }
 }
+
+// РАСКРЫТИЕ ИНФОРМАЦИИ ПРОДУКТА
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим все кнопки "more_info"
+    const buttons = document.querySelectorAll('.more_info');
+
+    // Обрабатываем нажатие каждой кнопки
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const parent = this.closest('.product_info_description'); // Находим родительский блок
+            const infoBlock = parent.querySelector('.pr_in_desc_info'); // Находим блок с информацией
+            const img = this.querySelector('img'); // Изображение в кнопке
+            const spanText = this.querySelector('span'); // Текст кнопки
+
+            // Проверяем, открыт ли блок, через наличие класса "open"
+            if (infoBlock.classList.contains('open')) {
+                // Если открыт — закрываем
+                infoBlock.style.maxHeight = '90px';
+                img.style.transform = 'rotate(0deg)';
+                spanText.textContent = 'больше';
+                infoBlock.classList.remove('open');
+            } else {
+                // Если закрыт — открываем
+                infoBlock.style.maxHeight = infoBlock.scrollHeight + 'px'; // Устанавливаем max-height на текущую высоту контента
+                img.style.transform = 'rotate(180deg)';
+                spanText.textContent = 'Скрыть';
+                infoBlock.classList.add('open');
+            }
+        });
+    });
+});

@@ -2958,42 +2958,487 @@ h5.accordion.active::after {
 
 /* ПРОДУКТ */
 
+#product_page {
+    padding-top: 60px;
+}
+
+.background_page {
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#product_page .wrapper,
+#add_info .wrapper {
+    padding: 0 70px;
+}
+
+.product_header {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_header h1 {
+    max-width: 520px;
+    font-size: 42px;
+    font-family: 'TT Travels';
+    font-weight: 500;
+}
+
+.product_header_info {
+    display: flex;
+    gap: 45px;
+}
+
+.product_header_info_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product_header_info_box p {
+    min-height: 36px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'TT Norms Pro';
+}
+
+.product_header_info_box span {
+    min-height: 36px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #909bae;
+    font-family: 'TT Travels';
+}
+
+.product_info {
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.gallery_flex_img {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    margin: 5px 0 0 10px;
+}
+
+.gallery_flex_img .gallery_flex_img_cont {
+    width: 75px;
+    height: 68px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery_flex_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Подстраиваем изображение под контейнер */
+    mask-image: url('../img/product/mask_gallery.png');
+    /* Применяем ту же маску */
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #000;
+    background-image: url(../img/product/mask_gallery.png);
+    position: relative;
+    background-size: 100%;
+    z-index: 2;
+    /* Изображение выше псевдоэлемента */
+}
+
+.gallery_content {
+    position: relative;
+    width: 857px;
+    height: 568px;
+    overflow: hidden;
+}
+
+.galleru_img {
+    width: 100%;
+    height: 100%;
+}
+
+.galleru_img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Подстраиваем изображение под контейнер */
+    mask-image: url('../img/product/mask_product.png');
+    /* Применяем ту же маску */
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    /* background-color: #000;
+    background-image: url(../img/product/mask_product.png); */
+}
+
+.advantages {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 50px;
+}
+
+.advantages_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ad_img {
+    min-width: 45px;
+    min-height: 45px;
+    max-width: 45px;
+    max-height: 45px;
+    border-radius: 50px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/product/ad3.png);
+}
+
+.advantages_box h4 {
+    max-width: 150px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'TT Norms Pro';
+}
+
+#product_page {
+    color: #fff !important;
+}
+
+.product_page {
+    padding-bottom: 75px;
+}
+
+.product_info_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.product_price {
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    margin-bottom: 40px;
+}
+
+.product_price h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'TT Norms Pro';
+}
+
+.product_price span {
+    font-size: 24px;
+    font-weight: 400;
+    color: #909bae;
+    text-decoration: line-through;
+    font-family: 'TT Norms Pro';
+}
+
+.product_info_content .redact_sum {
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.product_info_content .redact_sum .quantity {
+    height: 28px;
+    width: 123px;
+}
+
+.product_info_content .redact_sum .quantity input {
+    width: 57px;
+}
+
+.availability {
+    border-radius: 6px;
+    background: rgba(31, 34, 33, 0.8);
+    height: 24px;
+    padding: 0 12px 2px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.availability p {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'TT Norms Pro';
+    color: #909bae;
+}
+
+.availability p .green {
+    color: #42a224;
+}
+
+.product_indo_btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.product_indo_btn button {
+    width: 255px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+}
+
+.pr_inf_btn.blue_btn {
+    background: url(../img/product/basket_mask.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.product_indo_btn .btn_one_click {
+    border-radius: 8px;
+}
+
+.product_indo_btn .btn_one_click::before {
+    height: 100%;
+    content: url(../img/product/bnt_click.png);
+}
+
+.product_info_description h3 {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'TT Norms Pro';
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.product_info_description {
+    margin-top: 45px;
+}
+
+.pr_in_desc_info {
+    max-height: 90px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease-in-out;
+    /* Плавное изменение высоты */
+}
+
+.pr_in_desc_info::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    /* Высота затемнения */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    /* Градиент от черного к прозрачному */
+    pointer-events: none;
+    /* Чтобы элемент не блокировал клики */
+    transition: opacity 0.3s ease-in-out;
+    /* Плавное исчезновение затемнения */
+    opacity: 1;
+    /* Изначально затемнение видимо */
+}
+
+.pr_in_desc_info.open::after {
+    opacity: 0;
+    /* Затемнение исчезает при раскрытии */
+}
+
+.more_info img {
+    transition: transform 0.3s ease-in-out;
+    /* Плавное вращение изображения */
+}
+
+.product_info_description p span {
+    color: #909bae;
+}
+
+.product_info_description p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 20px;
+    font-family: 'TT Norms Pro';
+}
+
+.product_info_description ol {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product_info_description li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product_info_description li::before {
+    content: ' ';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+    background: #fff;
+}
+
+.more_info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #909bae;
+    font-family: 'TT Norms Pro';
+    margin-top: 15px;
+}
+
+.doc_link {
+    width: 152px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+    margin-top: 52px;
+}
+
+.doc_link::before {
+    content: url(../img/search/btn_bg.png);
+    position: absolute;
+    z-index: 0;
+    left: 0;
+}
+
+.doc_link span {
+    border-bottom: 1px dotted #fff;
+}
+
+.specifications h3 {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'TT Norms Pro';
+    color: #fff;
+}
+
+.spec_hr {
+    width: 100%;
+    height: 1px;
+    background: #4b4c4c;
+    margin: 15px 0 30px;
+}
+
+.specifications_info {
+    padding-right: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 70px;
+}
+
 .specifications_content {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 410px;
+    position: relative;
 }
 
 .spec_row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    /* Добавляем пунктирную линию как вариант оформления */
+}
+
+.spec_row span {
+    color: #909bae;
+    font-family: 'TT Norms Pro';
 }
 
 .spec_param {
     position: relative;
-    padding-right: 20px;
+    padding-right: 10px;
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
 }
 
 .spec_param::after {
-    content: "..................................................................................................................................................................................................";
-    position: absolute;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #ccc;
-    /* цвет точек */
+    position: relative;
     width: 100%;
-    padding-left: 5px;
+    content: ' ';
+    margin-left: 5px;
+    display: block;
+    height: 80%;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
 }
 
 .spec_value {
     white-space: nowrap;
+    display: flex;
+    max-width: 115px;
+    text-align: start;
+    justify-content: start;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff !important;
+}
+
+.spec_cont_hr {
+    width: 1px;
+    display: block;
+    height: 170px;
+    background: #4b4c4c;
+}
+
+#add_info {
+    padding: 40px 0 100px;
+    background-image: url(../img/product/bg2.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 
 .accordion_section {
-    width: 60%;
-    float: left;
+    width: 100%;
+    max-width: 865px;
 }
 
 .accordion_item {
@@ -3083,8 +3528,4 @@ h5.accordion.active::after {
 .file_preview .file_size {
     font-size: 12px;
     color: #aaa;
-}
-
-#product_page {
-    color: #fff !important;
 }

@@ -134,3 +134,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// АККОРДИОН
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionItems = document.querySelectorAll('.accordion_item');
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion_header');
+        const toggleButton = item.querySelector('.accordion_toggle');
+        const content = item.querySelector('.accordion_content');
+
+        header.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Закрываем все остальные аккордеоны
+            accordionItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.accordion_content').style.maxHeight = null;
+                otherItem.querySelector('.accordion_toggle').textContent = '+'; // Возвращаем "+" при закрытии
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px'; // Открываем контент
+                toggleButton.textContent = '-'; // Меняем текст кнопки на "-"
+            } else {
+                item.classList.remove('active');
+                content.style.maxHeight = null; // Скрываем контент
+                toggleButton.textContent = '+'; // Возвращаем "+"
+            }
+        });
+    });
+});

@@ -3436,51 +3436,121 @@ h5.accordion.active::after {
     background-size: cover;
 }
 
+.add_info {
+    display: flex;
+    align-items: self-start;
+    gap: 100px;
+}
+
 .accordion_section {
     width: 100%;
     max-width: 865px;
+    border-top: 1px solid #333;
 }
 
 .accordion_item {
     border-bottom: 1px solid #333;
-    padding: 10px 0;
+    padding: 30px 0 40px;
 }
 
 .accordion_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .accordion_toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
     font-size: 20px;
-    color: #ccc;
+    color: #000;
     cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.accordion_header span {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'TT Norms Pro';
+    color: #fff;
 }
 
 .accordion_content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
     display: flex;
-    margin-top: 10px;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 26px;
+}
+
+.accordion_item.active .accordion_content {
+    max-height: auto;
+    margin-top: 40px;
+    /* Максимальная высота, которая достаточно велика для контента */
 }
 
 .file_item {
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background-color: #444;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
+    width: 271px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 20px;
+    gap: 10px;
+    z-index: 1;
+    transition: opacity .3s ease;
+}
+
+.file_item:hover::before {
+    opacity: .3;
+    transition: opacity .3s ease;
+}
+
+.file_item::before {
+    transition: opacity .3s ease;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    content: url(../img/product/file_bg.png);
+}
+
+.file_info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .file_format {
-    background-color: #bbb;
+    background-color: #cacddb;
     padding: 5px 10px;
-    border-radius: 4px;
-    margin-bottom: 5px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    height: 26px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+    color: #000;
+    box-shadow: 2px 2px 9px 2px #cacddb51;
 }
 
 .file_name {
@@ -3495,15 +3565,42 @@ h5.accordion.active::after {
 }
 
 .file_preview_section {
-    width: 35%;
-    float: right;
+    width: 271px;
 }
 
 .file_preview {
-    background-color: #333;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 276px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 21px 0 0 28px;
+    z-index: 1;
+    transition: opacity .3s ease;
+}
+
+.file_preview:hover::before {
+    opacity: .3;
+    transition: opacity .3s ease;
+}
+
+.file_preview::before {
+    transition: opacity .3s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    display: block;
+    content: url(../img/product/file_bg_2.png);
+}
+
+.file_preview_title {
+    display: flex;
+    align-items: start;
+    gap: 15px;
 }
 
 .file_image {
@@ -3522,10 +3619,25 @@ h5.accordion.active::after {
 .file_preview .file_name {
     font-size: 14px;
     color: #fff;
-    margin-top: 10px;
+    font-family: 'TT Norms Pro';
+    max-width: 135px;
 }
 
 .file_preview .file_size {
     font-size: 12px;
-    color: #aaa;
+    font-family: 'TT Norms Pro';
+    color: #909bae;
+    margin-top: 10px;
+}
+
+.file_preview_img {
+    width: 223px;
+    height: 132px;
+    background: url(../img/product/file_preview.png);
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding-bottom: 15px;
 }

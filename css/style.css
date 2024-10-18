@@ -73,7 +73,7 @@ header {
     gap: 10px;
     width: 192px;
     height: 31px;
-    background: #000;
+    background: transparent;
     border-radius: 10px;
     border: 1px solid #858994;
 }
@@ -1893,6 +1893,7 @@ footer {
 
 .bg_btn_w {
     transition: all .3s ease-in;
+    background: transparent;
 }
 
 .bg_btn_w_none {
@@ -2727,10 +2728,12 @@ h5.accordion.active::after {
     max-width: 185px;
 }
 
-.search_product_info_title h3 {
+.search_product_info_title h3,
+.search_product_info_title a {
     font-size: 14px;
     font-weight: 500;
     line-height: auto;
+    color: #fff;
     font-family: 'TT Travels';
 }
 
@@ -2965,6 +2968,10 @@ h5.accordion.active::after {
     padding-top: 60px;
 }
 
+#product_page .wrapper {
+    position: relative;
+}
+
 .background_page {
     display: block;
     top: 0;
@@ -3022,8 +3029,23 @@ h5.accordion.active::after {
 .product_info {
     margin-top: 60px;
     display: flex;
-    gap: 30px;
+    gap: 60px;
     justify-content: space-between;
+}
+
+.shodow_img {
+    position: absolute;
+    z-index: -0;
+    display: block;
+    width: 1238px;
+    height: 979px;
+    top: -40px;
+    left: -45px;
+}
+
+.shodow_img {
+    width: 100%;
+    height: 100%;
 }
 
 .gallery_flex_img {
@@ -3038,6 +3060,7 @@ h5.accordion.active::after {
     height: 68px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .gallery_flex_img img {
@@ -3076,7 +3099,7 @@ h5.accordion.active::after {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     /* Подстраиваем изображение под контейнер */
     mask-image: url('../img/product/mask_product.png');
     /* Применяем ту же маску */
@@ -3128,6 +3151,7 @@ h5.accordion.active::after {
 .product_info_content {
     display: flex;
     flex-direction: column;
+    z-index: 9;
 }
 
 .product_price {
@@ -3622,7 +3646,7 @@ h5.accordion.active::after {
     font-size: 14px;
     color: #fff;
     font-family: 'TT Norms Pro';
-    max-width: 135px;
+    max-width: 140px;
 }
 
 .file_preview .file_size {
@@ -3635,13 +3659,26 @@ h5.accordion.active::after {
 .file_preview_img {
     width: 223px;
     height: 132px;
-    background: url(../img/product/file_preview.png);
-    background-size: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: end;
     padding-bottom: 15px;
+    position: relative;
+}
+
+.file_preview_bg_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.file_preview_bg_img img {
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -3787,4 +3824,284 @@ h5.accordion.active::after {
     max-width: 100%;
     font-size: 12px;
     line-height: normal;
+}
+
+
+/* КОРЗИНА */
+
+#basket_page {
+    padding-top: 60px;
+}
+
+.basket_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 886px;
+    margin: 20px 0 40px;
+}
+
+.basket_title h1 {
+    font-size: 42px;
+    font-family: 'TT Travels';
+}
+
+.basket_title button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 207px;
+    height: 40px;
+    background: #464c58;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-family: 'TT Travels';
+}
+
+.backet_content {
+    display: flex;
+    align-items: self-start;
+    gap: 30px;
+    padding-bottom: 60px;
+}
+
+.backet_info {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    width: 886px;
+    background-color: #0e0f11;
+    background-image: url(../img/basket/basket_info_bg.png);
+    background-size: 100%;
+    background-position: left top;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+}
+
+.basket_product {
+    padding: 20px 15px 31px 19px;
+    border-bottom: none;
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+}
+
+.basket_product:hover {
+    background-image: url(../img/basket/basket_product.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.delete_product {
+    display: flex;
+    width: 46px;
+    height: 46px;
+    background: none;
+    position: relative;
+    transition: opacity .3s ease;
+}
+
+.delete_product img {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transition: opacity .3s ease;
+}
+
+.delete_red {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.delete_product:hover .delete_red {
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.delete_product:hover .delete_one {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.search_product_info_title a:hover {
+    text-decoration: underline;
+}
+
+.search_product_info_title .availability {
+    width: 125px;
+    height: 24px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-family: 'TT Norms Pro';
+}
+
+.back_to_basket {
+    position: relative;
+    z-index: 3;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 196px;
+    height: 31px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid #858994;
+    margin-top: 30px;
+}
+
+.back_to_basket::before {
+    content: url(../img/effects/catalog.png);
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+.hr_basket {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: rgba(255, 255, 255, .32);
+    margin-top: 30px;
+}
+
+.basket_sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result_box {
+    width: 585px;
+    height: 299px;
+    background: url(../img/basket/result.png);
+    background-size: 100%;
+    padding: 50px 10px 30px 65px;
+    overflow: hidden;
+    position: relative;
+}
+
+.result_box::before {
+    position: absolute;
+    content: url(../img/basket/s.png);
+    height: 100%;
+    right: 20px;
+    bottom: 0;
+    z-index: -0;
+}
+
+.result_box h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'TT Norms Pro';
+}
+
+.result_box p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #909bae;
+    margin: 22px 0 34px;
+}
+
+.result_box p span {
+    font-size: 36px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.result_box .result_flex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 3;
+}
+
+.result_box .result_flex button {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: transparent;
+}
+
+.arrange_btn {
+    width: 259px;
+    position: relative;
+    z-index: 1;
+    color: #0e090c;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+    transition: all .3s ease-in;
+}
+
+.arrange_btn::before {
+    content: url(../img/basket/arrange.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    transition: opacity .3s ease-in;
+}
+
+.arrange_btn:hover {
+    color: #fff;
+    transition: color .3s ease-in;
+}
+
+.arrange_btn:hover::before {
+    transition: opacity .3s ease-in;
+    opacity: .6;
+}
+
+.fast_btn {
+    font-family: 'TT Travels';
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    height: 65px;
+    width: 213px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #a0aac1;
+    border-radius: 14.5px;
+    box-shadow: 2px 5px 3px -3px rgba(0, 0, 0, 0.4);
+    transition: background .3s ease-in-out;
+}
+
+.fast_btn:hover {
+    transition: background .3s ease-in-out;
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.fast_btn::before {
+    content: ' ';
+    background: url(../img/effects/form_btn_two.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 166px;
+    z-index: -0;
+    top: 0;
+    left: 0;
+    height: 100%;
 }

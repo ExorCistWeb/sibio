@@ -168,3 +168,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Галерея
+document.addEventListener('DOMContentLoaded', function() {
+    const smallImages = document.querySelectorAll('.gallery_flex_img_cont img');
+    const galleryContainer = document.querySelector('.galleru_img');
+
+    // Если есть изображения в галерее, берем первое изображение и добавляем его в блок .galleru_img
+    if (smallImages.length > 0) {
+        const firstImageSrc = smallImages[0].src;
+
+        // Создаем новый элемент <img> и добавляем его в контейнер .galleru_img
+        const largeImage = document.createElement('img');
+        largeImage.src = firstImageSrc;
+        largeImage.alt = "Selected Image";
+        galleryContainer.appendChild(largeImage);
+
+        // Добавляем функционал для изменения изображения по клику на маленькие изображения
+        smallImages.forEach(img => {
+            img.addEventListener('click', function() {
+                largeImage.src = this.src;
+            });
+        });
+    }
+});

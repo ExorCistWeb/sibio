@@ -3108,7 +3108,7 @@ h5.accordion.active::after {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
     /* Подстраиваем изображение под контейнер */
     mask-image: url('../img/product/mask_product.png');
     /* Применяем ту же маску */

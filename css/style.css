@@ -2379,11 +2379,15 @@ h5.accordion.active::after {
 .info_page {
     width: 100%;
     padding-right: 215px;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    text-align: start;
+    flex-direction: column;
 }
 
 .info_page p {
-    max-width: 668px;
-    float: right;
+    max-width: 700px;
     line-height: 24px;
     font-size: 16px;
 }
@@ -4109,4 +4113,77 @@ h5.accordion.active::after {
     top: 0;
     left: 0;
     height: 100%;
+}
+
+
+/* КАТАЛОГ ПОДКАТЕГОРИЯ */
+
+.d_i_text_cont_to_img {
+    display: flex;
+    align-items: center;
+}
+
+.d_i_text_cont_to_img p {
+    max-width: 555px;
+}
+
+.cat_page_cont_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.cat_page_flex {
+    display: flex;
+    gap: 15px;
+}
+
+.cat_page_flex a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: auto;
+    padding: 0 20px;
+    height: 40px;
+    background: #464c58;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-family: 'TT Travels';
+}
+
+.catalog_page_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.catalog_page_wrapper {
+    padding: 0px 70px;
+}
+
+#catalog_pages .background_page {
+    top: 296px;
+}
+
+#catalog_pages .head_page_info {
+    padding: 60px 70px 50px 70px;
+}
+
+.catalog_page_product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.catalog_page_product .card_slider {
+    display: flex;
+}
+
+.catalog_wrappers {
+    position: relative;
 }

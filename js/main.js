@@ -39,42 +39,60 @@ document.querySelectorAll('.input_box input').forEach(input => {
     });
 });
 $(document).ready(function() {
-    // По клику на любую кнопку с классом .btn_catalog
-    $('.btn_catalog').on('click', function() {
-        var menu = $('.menu_catalog');
+    var menu = $('.menu_catalog');
+    var catalogWrapper = $('.catalog_wrapper');
 
-        // Проверяем, открыто ли меню
-        if (menu.is(':visible')) {
-            // Анимация закрытия: перемещение вправо и уменьшение высоты
-            menu.animate({
-                opacity: 0,
-                right: '-100px',
-                top: '-100px',
-                height: '0px',
-                padding: '0px'
-            }, 600, function() {
-                menu.hide(); // Скрываем меню после анимации
-            });
-        } else {
-            // Сбросим стиль и отобразим перед открытием
-            menu.css({
-                display: 'flex', // Отображаем меню перед анимацией
-                opacity: 0,
-                right: '0',
-                top: '40px',
-                height: '0px',
-                padding: '0px'
-            });
+    // Функция для открытия меню
+    function openMenu() {
+        menu.css({
+            display: 'flex',
+            opacity: 0,
+            right: '0',
+            top: '40px',
+            height: '0px',
+            padding: '0px'
+        });
 
-            // Анимация открытия: возвращаем к исходным размерам и позиции
-            menu.animate({
-                opacity: 1,
-                right: '0px',
-                top: '40px',
-                height: '662px',
-                padding: '70px 70px 68px 73px'
-            }, 600);
-        }
+        menu.animate({
+            opacity: 1,
+            right: '0px',
+            top: '40px',
+            height: '662px',
+            padding: '70px 70px 68px 73px'
+        }, 600);
+    }
+
+    // Функция для закрытия меню
+    function closeMenu() {
+        menu.animate({
+            opacity: 0,
+            right: '-100px',
+            top: '-100px',
+            height: '0px',
+            padding: '0px'
+        }, 600, function() {
+            menu.hide();
+        });
+    }
+
+    // Открытие меню при наведении на кнопку
+    $('.btn_catalog').on('mouseenter', function() {
+        openMenu();
+    });
+
+    // Закрытие меню при уходе мыши
+    catalogWrapper.on('mouseleave', function() {
+        closeMenu();
+    });
+
+    // Оставляем меню открытым, если мышь над ним
+    menu.on('mouseenter', function() {
+        $(this).stop(true, true); // Останавливаем текущую анимацию
+        $(this).css({ opacity: 1 }); // Устанавливаем видимость на 1
+    });
+
+    menu.on('mouseleave', function() {
+        closeMenu();
     });
 });
 

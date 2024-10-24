@@ -256,6 +256,7 @@
                                 </div>
                             </div>
 
+
                             <!-- Контактное лицо -->
                             <div class="order_form_flex">
                                 <div class="form-group">
@@ -287,36 +288,234 @@
                                 <!-- Прикрепление документа -->
                                 <div class="form-group">
                                     <div class="file-upload">
+                                        <img src="./img/effects/download.png" alt="">
                                         <label for="file">Прикрепить документ</label>
                                         <input type="file" id="file" multiple>
                                     </div>
                                     <div class="file-list">
-                                        <div class="file-item">Файл прикреплен: <span>tex_задание.docx</span></div>
-                                        <div class="file-item">Файл прикреплен: <span>картапартнера.pdf</span></div>
+                                        <div class="file-item"><button><img src="./img/effects/close2.png" alt=""></button> Файл прикреплен: <span>tex_задание.docx</span></div>
+                                        <div class="file-item"><button><img src="./img/effects/close2.png" alt=""></button>Файл прикреплен: <span>картапартнера.pdf</span></div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Сообщение -->
-                            <div class="form-group">
-                                <textarea id="message" placeholder="Ваше сообщение"></textarea>
-                            </div>
+
+                            <textarea id="message" placeholder="Ваше сообщение"></textarea>
+
 
                             <!-- Кнопка отправки -->
                             <div class="submit_btns">
                                 <button class="arrange_btn">Оформить заказ</button>
 
 
-                                <p class="privacy">Согласен с условиями политики конфиденциальности<br><a href="#">политикой конфиденциальности</a></p>
+                                <p class="privacy">Согласен с условиями политики конфиденциальности<br><a href="#">Политика конфиденциальности</a></p>
                             </div>
                         </form>
 
 
                     </div>
-                    <div class="basket_sidebar">
+                    <div class="basket_sidebar order_sidebar">
                         <div class="result_box">
-                            <h3>Итого:</h3>
-                            <p><span>25</span> единиц товаров</p>
+                            <h4>Ваш заказ</h4>
+                            <div class="result_content">
+                                <div class="result_cont_overflow">
+                                    <div class="result_cont_flex">
+                                        <div class="search_product_info">
+                                            <div class="search_product_info_img orange_product">
+                                                <img src="./img/search/product.png" alt="">
+                                            </div>
+                                            <div class="search_product_info_title">
+
+                                                <a href="">Радиатор стальной универсальный Sibio 21</a>
+                                                <p>500x400</p>
+                                            </div>
+                                        </div>
+                                        <div class="redact_sum">
+                                            <div class="price">
+
+                                                <span>4 819 ₽</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <button class="minus-btn" onclick="changeQuantity(-1)">_</button>
+                                                <input type="text" id="quantity-input" value="1" readonly>
+                                                <button class="plus-btn" onclick="changeQuantity(1)">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result_cont_flex">
+                                        <div class="search_product_info">
+                                            <div class="search_product_info_img orange_product">
+                                                <img src="./img/search/product.png" alt="">
+                                            </div>
+                                            <div class="search_product_info_title">
+
+                                                <a href="">Радиатор стальной универсальный Sibio 21</a>
+                                                <p>500x400</p>
+                                            </div>
+                                        </div>
+                                        <div class="redact_sum">
+                                            <div class="price">
+
+                                                <span>4 819 ₽</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <button class="minus-btn" onclick="changeQuantity(-1)">_</button>
+                                                <input type="text" id="quantity-input" value="1" readonly>
+                                                <button class="plus-btn" onclick="changeQuantity(1)">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result_cont_flex">
+                                        <div class="search_product_info">
+                                            <div class="search_product_info_img orange_product">
+                                                <img src="./img/search/product.png" alt="">
+                                            </div>
+                                            <div class="search_product_info_title">
+
+                                                <a href="">Радиатор стальной универсальный Sibio 21</a>
+                                                <p>500x400</p>
+                                            </div>
+                                        </div>
+                                        <div class="redact_sum">
+                                            <div class="price">
+
+                                                <span>4 819 ₽</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <button class="minus-btn" onclick="changeQuantity(-1)">_</button>
+                                                <input type="text" id="quantity-input" value="1" readonly>
+                                                <button class="plus-btn" onclick="changeQuantity(1)">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result_cont_flex">
+                                        <div class="search_product_info">
+                                            <div class="search_product_info_img orange_product">
+                                                <img src="./img/search/product.png" alt="">
+                                            </div>
+                                            <div class="search_product_info_title">
+
+                                                <a href="">Радиатор стальной универсальный Sibio 21</a>
+                                                <p>500x400</p>
+                                            </div>
+                                        </div>
+                                        <div class="redact_sum">
+                                            <div class="price">
+
+                                                <span>4 819 ₽</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <button class="minus-btn" onclick="changeQuantity(-1)">_</button>
+                                                <input type="text" id="quantity-input" value="1" readonly>
+                                                <button class="plus-btn" onclick="changeQuantity(1)">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result_cont_flex">
+                                        <div class="search_product_info">
+                                            <div class="search_product_info_img orange_product">
+                                                <img src="./img/search/product.png" alt="">
+                                            </div>
+                                            <div class="search_product_info_title">
+
+                                                <a href="">Радиатор стальной универсальный Sibio 21</a>
+                                                <p>500x400</p>
+                                            </div>
+                                        </div>
+                                        <div class="redact_sum">
+                                            <div class="price">
+
+                                                <span>4 819 ₽</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <button class="minus-btn" onclick="changeQuantity(-1)">_</button>
+                                                <input type="text" id="quantity-input" value="1" readonly>
+                                                <button class="plus-btn" onclick="changeQuantity(1)">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result_cont_flex">
+                                        <div class="search_product_info">
+                                            <div class="search_product_info_img orange_product">
+                                                <img src="./img/search/product.png" alt="">
+                                            </div>
+                                            <div class="search_product_info_title">
+
+                                                <a href="">Радиатор стальной универсальный Sibio 21</a>
+                                                <p>500x400</p>
+                                            </div>
+                                        </div>
+                                        <div class="redact_sum">
+                                            <div class="price">
+
+                                                <span>4 819 ₽</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <button class="minus-btn" onclick="changeQuantity(-1)">_</button>
+                                                <input type="text" id="quantity-input" value="1" readonly>
+                                                <button class="plus-btn" onclick="changeQuantity(1)">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result_cont_flex">
+                                        <div class="search_product_info">
+                                            <div class="search_product_info_img orange_product">
+                                                <img src="./img/search/product.png" alt="">
+                                            </div>
+                                            <div class="search_product_info_title">
+
+                                                <a href="">Радиатор стальной универсальный Sibio 21</a>
+                                                <p>500x400</p>
+                                            </div>
+                                        </div>
+                                        <div class="redact_sum">
+                                            <div class="price">
+
+                                                <span>4 819 ₽</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <button class="minus-btn" onclick="changeQuantity(-1)">_</button>
+                                                <input type="text" id="quantity-input" value="1" readonly>
+                                                <button class="plus-btn" onclick="changeQuantity(1)">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result_cont_flex">
+                                        <div class="search_product_info">
+                                            <div class="search_product_info_img orange_product">
+                                                <img src="./img/search/product.png" alt="">
+                                            </div>
+                                            <div class="search_product_info_title">
+
+                                                <a href="">Радиатор стальной универсальный Sibio 21</a>
+                                                <p>500x400</p>
+                                            </div>
+                                        </div>
+                                        <div class="redact_sum">
+                                            <div class="price">
+
+                                                <span>4 819 ₽</span>
+                                            </div>
+                                            <div class="quantity">
+                                                <button class="minus-btn" onclick="changeQuantity(-1)">_</button>
+                                                <input type="text" id="quantity-input" value="1" readonly>
+                                                <button class="plus-btn" onclick="changeQuantity(1)">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itog_order">
+                                <div>
+                                    <h3>Итого:</h3>
+                                    <p><span>25</span> единиц товаров</p>
+                                </div>
+                                <div>
+                                    <p>на сумму</p>
+                                    <p><span>45 679 ₽</span></p>
+                                </div>
+                            </div>
                             <div class="result_flex">
 
                                 <button class="fast_btn">Быстрый заказ</button>

@@ -4245,6 +4245,7 @@ h5.accordion.active::after {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .radio_group {
@@ -4253,15 +4254,80 @@ h5.accordion.active::after {
     margin-bottom: 35px;
 }
 
+.radio_group {
+    display: flex;
+    gap: 30px;
+    /* Пространство между кнопками */
+}
+
+.radio-option {
+    display: inline-block;
+    position: relative;
+    font-family: 'TT Travels';
+}
+
 .radio-option input[type="radio"] {
-    margin-right: 10px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 19px;
+    width: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .radio-option label {
-    color: #fff;
-    font-weight: 500;
+    padding-left: 30px;
     font-size: 13px;
-    font-family: 'TT Travels';
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color .3s ease-in;
+}
+
+.radio-option:hover label {
+    color: #909bae;
+    transition: color .3s ease-in;
+}
+
+.radio-option label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 19px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.radio-option label::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: 8px;
+    min-height: 8px;
+    max-width: 8px;
+    max-height: 8px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.radio-option input[type="radio"]:checked+label::after {
+    background-color: red;
+    /* Красный цвет кружочка при активном выборе */
+}
+
+.radio-option input[type="radio"]:hover+label::after {
+    background-color: #888;
+    /* Серый кружочек при наведении */
 }
 
 .order_form_flex {
@@ -4294,7 +4360,7 @@ h5.accordion.active::after {
 
 .order_form_flex .form-group input {
     width: 100%;
-    height: 40px;
+    height: 52px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     background: transparent;
     position: relative;
@@ -4305,7 +4371,7 @@ h5.accordion.active::after {
     font-family: 'TT Travels';
 }
 
-.form-group textarea {
+textarea {
     width: 100%;
     height: 40px;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -4319,9 +4385,11 @@ h5.accordion.active::after {
     min-height: 135px;
     padding: 20px;
     border-radius: 14.5px;
+    resize: none;
+    margin: 60px 0 60px;
 }
 
-.form-group textarea::placeholder {
+textarea::placeholder {
     font-size: 13px;
     font-weight: 500;
     font-family: 'TT Travels';
@@ -4330,6 +4398,37 @@ h5.accordion.active::after {
 
 .file-upload {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.file-upload input {
+    opacity: 0;
+    width: 100%;
+    z-index: 11;
+    position: absolute !important;
+    left: 0;
+    height: 100%;
+    cursor: pointer !important;
+}
+
+.file-upload img {
+    position: relative;
+    z-index: 1;
+    cursor: pointer !important;
+}
+
+.file-upload label {
+    position: relative !important;
+    width: 100%;
+    cursor: pointer !important;
+    position: relative;
+    z-index: 1;
 }
 
 .form-group label.active {
@@ -4352,11 +4451,15 @@ h5.accordion.active::after {
     background: transparent;
 }
 
+.submit_btns button::before {
+    content: url(../img/effects/order_btn.png);
+}
+
 .privacy {
     font-size: 13px;
     font-weight: 500;
     font-family: 'TT Travels';
-    color: #909bae;
+    color: #6f798a;
     line-height: 22px;
 }
 
@@ -4365,5 +4468,202 @@ h5.accordion.active::after {
     font-size: 13px;
     font-weight: 500;
     font-family: 'TT Travels';
+    color: #848484;
+}
+
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 0 0 10px;
+}
+
+.file-item {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'TT Travels';
+}
+
+.file-item span {
     color: #909bae;
+}
+
+.file-item button {
+    background: none;
+}
+
+.order_sidebar .result_content {
+    height: 505px;
+    background: #0e0f11;
+    border-radius: 16px;
+    margin-bottom: 37px;
+    padding: 34px 28px 36px 17px;
+    position: relative;
+    overflow: hidden;
+    /* Добавлено, чтобы скроллбар не вылезал за пределы блока */
+}
+
+.result_cont_overflow {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding-left: 16px;
+    height: 100%;
+    direction: rtl;
+    /* Скроллбар слева */
+}
+
+.result_cont_overflow>* {
+    direction: ltr;
+    /* Возвращаем нормальное направление содержимого */
+}
+
+
+/* Для WebKit браузеров (Chrome, Safari, Edge) */
+
+.order_sidebar .result_cont_overflow::-webkit-scrollbar {
+    width: 5px;
+    /* Ширина скроллбара */
+}
+
+.order_sidebar .result_cont_overflow::-webkit-scrollbar-track {
+    background: #1b1c1f;
+    /* Цвет фона полосы прокрутки */
+    border-radius: 2.5px;
+    /* Скругление */
+}
+
+.order_sidebar .result_cont_overflow::-webkit-scrollbar-thumb {
+    background-color: #3a3b3f;
+    /* Цвет "ползунка" */
+    border-radius: 2.5px;
+    /* Скругление */
+    border: 2px solid #1b1c1f;
+    /* Отступ от края */
+}
+
+.order_sidebar .result_cont_overflow::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Цвет при наведении */
+}
+
+
+/* Убираем кнопки скроллбара */
+
+.order_sidebar .result_cont_overflow::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+/* Для Firefox */
+
+.order_sidebar .result_cont_overflow {
+    scrollbar-width: thin;
+    /* Уменьшение ширины скроллбара */
+    scrollbar-color: #3a3b3f #1b1c1f;
+    /* Цвет ползунка и фона */
+    direction: rtl;
+    /* Скроллбар слева */
+}
+
+.order_sidebar .result_cont_overflow>* {
+    direction: ltr;
+    /* Возвращаем нормальное направление содержимого */
+}
+
+
+/* Для устройства touch */
+
+@media (hover: none) {
+    .order_sidebar .result_cont_overflow {
+        overflow-y: auto;
+        scrollbar-width: none;
+        /* Отключить скроллбар */
+    }
+}
+
+.order_sidebar .result_box {
+    padding: 39px 26px 60px 60px;
+    height: 835px;
+    background: url(../img/effects/order_sidebar.png);
+}
+
+.order_sidebar .result_box h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+    margin-bottom: 23px;
+}
+
+.result_cont_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.result_cont_flex .search_product_info {
+    gap: 19px;
+}
+
+.result_cont_flex .search_product_info_img {
+    min-width: 112px;
+    min-height: 76px;
+    max-width: 112px;
+    max-height: 76px;
+}
+
+.result_cont_flex .search_product_info_img img {
+    width: 65%;
+}
+
+.result_cont_flex .redact_sum {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 0;
+}
+
+.result_cont_flex .search_product_info_title p {
+    margin: 0 !important;
+    margin-top: 16px;
+    font-size: 13px;
+}
+
+.result_cont_flex .search_product_info_title a {
+    font-size: 13px;
+}
+
+.itog_order {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 22px;
+}
+
+.itog_order div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.itog_order div:nth-child(2) {
+    align-items: end;
+}
+
+.itog_order div * {
+    margin: 0;
+    padding: 0;
+}
+
+.order_sidebar .back_to_basket {
+    margin-top: 0;
 }

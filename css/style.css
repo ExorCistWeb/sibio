@@ -4354,6 +4354,15 @@ h5.accordion.active::after {
     z-index: 1;
 }
 
+.error_input {
+    position: absolute;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+    color: #ca2727;
+    margin: 10px 0 0 0;
+}
+
 .order_form_flex .form-group label span {
     color: #ca2727;
 }

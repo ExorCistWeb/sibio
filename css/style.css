@@ -4350,7 +4350,7 @@ h5.accordion.active::after {
     position: absolute;
     transition: all 0.3s ease;
     left: 0;
-    top: 0px;
+    top: 20px;
     z-index: 1;
 }
 
@@ -4429,6 +4429,7 @@ textarea::placeholder {
     cursor: pointer !important;
     position: relative;
     z-index: 1;
+    top: 0 !important;
 }
 
 .form-group label.active {

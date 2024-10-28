@@ -4165,6 +4165,7 @@ h5.accordion.active::after {
     display: flex;
     justify-content: space-between;
     padding-bottom: 50px;
+    gap: 50px;
 }
 
 .catalog_page_wrapper {
@@ -4183,14 +4184,394 @@ h5.accordion.active::after {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    width: 100%;
+}
+
+.card_slider_orange {
+    background-image: url(../img/effects/orange_card2.png);
 }
 
 .catalog_page_product .card_slider {
     display: flex;
+    position: relative;
+    height: 415px;
+}
+
+.card_slider .availability {
+    width: 108px;
+    padding: 0;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 13px;
+    right: 20px;
+}
+
+.price_info_box {
+    position: absolute;
+    top: 13px;
+}
+
+.card_slider_info .size {
+    font-family: 'TT Travels';
+    font-size: 13px;
+    font-weight: 500;
+    color: #909bae;
+}
+
+.card_slider_catalog {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_slider_info_catalog {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price_card {
+    font-size: 20px;
+    color: #fff;
+    font-family: 'TT Norms Pro';
+    font-weight: 400;
+}
+
+.card_slider_order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_slider_info_catalog {
+    padding-bottom: 20px;
+    height: 186px;
+    background-image: url(../img/effects/orange_card_b2.png) !important;
+}
+
+.price_info_box p {
+    position: relative;
+    z-index: 33;
+    padding-left: 10px;
+    padding-top: 3px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'TT Norms Pro';
+}
+
+.price_info_box_red::before {
+    content: url(../img/effects/red_price.png);
+    top: 0;
+    position: absolute;
+    left: -22px;
+}
+
+.card_order_orange {
+    background: none;
+    width: 91px;
+    height: 37px;
+    background: url(../img/effects/orange_card_product.png);
+    background-size: 100%;
+    color: #fff;
+    font-size: 13px;
+    font-family: 'TT Travels';
+    font-weight: 500;
+}
+
+.card_slider .availability p {
+    font-size: 12px;
 }
 
 .catalog_wrappers {
     position: relative;
+}
+
+.sidebar_box h3 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.price-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.price-input .field {
+    display: flex;
+    align-items: end;
+}
+
+.price-input .field span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'TT Norms Pro';
+}
+
+.field .sidebar_box_span,
+.sidebar_box label {
+    font-size: 16px !important;
+    font-weight: 400;
+    font-family: 'TT Norms Pro';
+    color: #909bae !important;
+}
+
+.field input {
+    width: 100%;
+    height: 26px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'TT Norms Pro';
+    background: none;
+    margin-left: 12px;
+    color: #909bae;
+    border-bottom: 1px solid #909bae;
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.price-input .separator {
+    width: 40px;
+    display: flex;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+    content: ' ';
+    background: #fff;
+    height: 2px;
+}
+
+.slider {
+    height: 5px;
+    position: relative;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.slider_sidebar {
+    margin-top: 20px;
+}
+
+.slider .progress {
+    height: 100%;
+    left: 25%;
+    right: 25%;
+    position: absolute;
+    border-radius: 5px;
+    background: #17A2B8;
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background: #17A2B8;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 17px;
+    width: 17px;
+    border: none;
+    border-radius: 50%;
+    background: #17A2B8;
+    pointer-events: auto;
+    -moz-appearance: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.catalog_page_sidebar {
+    width: 275px;
+}
+
+.sidebar_box {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+
+/* Стили независимых переключателей */
+
+.toggle-switch {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-switch label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    color: #f0f0f0;
+}
+
+.toggle-switch label::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #666;
+    border: 2px solid #666;
+    position: absolute;
+    left: 0;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.toggle-switch input[type="checkbox"]:checked+label::before {
+    background-color: #fff;
+    border-color: #4a90e2;
+}
+
+
+/* Стили кастомных чекбоксов */
+
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-group label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666;
+    border-radius: 4px;
+    margin-right: 8px;
+    background-color: transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkbox-group input[type="checkbox"]:checked+label::before {
+    background-color: #666;
+    background-image: url(../img/effects/check.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: #666;
+}
+
+.checkbox-group input[type="checkbox"]+label:hover::before {
+    background-image: url(../img/effects/check.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: #fff;
+}
+
+.checkbox-group input[type="checkbox"]+label:hover {
+    color: #fff !important;
+}
+
+.sidebar_box .buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.sidebar_box .buttons .review_btn {
+    background-image: url(../img/effects/review_btn.png);
+    background-size: 100%;
+    width: 127px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+    color: #fff;
+    border-radius: 14.5px;
+    background-color: transparent;
+}
+
+.reset_btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'TT Travels';
+    color: #909bae;
+}
+
+.download_catalog {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 275px;
+}
+
+.download_catalog .down_catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.down_catalog a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'TT Norms Pro';
+}
+
+.down_catalog span {
+    color: #505050;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'TT Norms Pro';
 }
 
 

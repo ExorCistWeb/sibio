@@ -1,6 +1,8 @@
 const priceGap = 5000;
+const heightGap = 10;
+const widthGap = 10;
 
-// Функция для обработки слайдера цены
+// Обработка для слайдера цены
 const priceInputMin = document.querySelector(".input-min-price");
 const priceInputMax = document.querySelector(".input-max-price");
 const rangeInputMinPrice = document.querySelector(".range-min-price");
@@ -28,7 +30,7 @@ function handlePriceRange(e) {
     }
 }
 
-// Функция для обработки слайдера высоты
+// Обработка для слайдера высоты
 const rangeInputMinHeight = document.querySelector(".range-min-height");
 const rangeInputMaxHeight = document.querySelector(".range-max-height");
 const progressHeight = document.querySelector(".progress-height");
@@ -40,14 +42,38 @@ function handleHeightRange(e) {
     let minVal = parseInt(rangeInputMinHeight.value),
         maxVal = parseInt(rangeInputMaxHeight.value);
 
-    if ((maxVal - minVal) < 10) {
+    if ((maxVal - minVal) < heightGap) {
         if (e.target === rangeInputMinHeight) {
-            rangeInputMinHeight.value = maxVal - 10;
+            rangeInputMinHeight.value = maxVal - heightGap;
         } else {
-            rangeInputMaxHeight.value = minVal + 10;
+            rangeInputMaxHeight.value = minVal + heightGap;
         }
     } else {
         progressHeight.style.left = ((minVal / rangeInputMinHeight.max) * 100) + "%";
         progressHeight.style.right = 100 - (maxVal / rangeInputMaxHeight.max) * 100 + "%";
+    }
+}
+
+// Обработка для слайдера ширины
+const rangeInputMinWidth = document.querySelector(".range-min-width");
+const rangeInputMaxWidth = document.querySelector(".range-max-width");
+const progressWidth = document.querySelector(".progress-width");
+
+rangeInputMinWidth.addEventListener("input", handleWidthRange);
+rangeInputMaxWidth.addEventListener("input", handleWidthRange);
+
+function handleWidthRange(e) {
+    let minVal = parseInt(rangeInputMinWidth.value),
+        maxVal = parseInt(rangeInputMaxWidth.value);
+
+    if ((maxVal - minVal) < widthGap) {
+        if (e.target === rangeInputMinWidth) {
+            rangeInputMinWidth.value = maxVal - widthGap;
+        } else {
+            rangeInputMaxWidth.value = minVal + widthGap;
+        }
+    } else {
+        progressWidth.style.left = ((minVal / rangeInputMinWidth.max) * 100) + "%";
+        progressWidth.style.right = 100 - (maxVal / rangeInputMaxWidth.max) * 100 + "%";
     }
 }

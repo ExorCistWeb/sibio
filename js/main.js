@@ -38,6 +38,7 @@ document.querySelectorAll('.input_box input').forEach(input => {
         }
     });
 });
+// КАТАЛОГ
 $(document).ready(function() {
     var menu = $('.menu_catalog');
     var catalogWrapper = $('.catalog_wrapper');
@@ -46,32 +47,23 @@ $(document).ready(function() {
     function openMenu() {
         menu.css({
             display: 'flex',
-            opacity: 0,
-            right: '0',
-            top: '40px',
-            height: '0px',
-            padding: '0px'
-        });
-
-        menu.animate({
             opacity: 1,
-            right: '0px',
+            right: '0',
             top: '40px',
             height: '662px',
             padding: '70px 70px 68px 73px'
-        }, 600);
+        });
     }
 
     // Функция для закрытия меню
     function closeMenu() {
-        menu.animate({
+        menu.css({
             opacity: 0,
             right: '-100px',
             top: '-100px',
             height: '0px',
-            padding: '0px'
-        }, 600, function() {
-            menu.hide();
+            padding: '0px',
+            display: 'none'
         });
     }
 
@@ -87,14 +79,14 @@ $(document).ready(function() {
 
     // Оставляем меню открытым, если мышь над ним
     menu.on('mouseenter', function() {
-        $(this).stop(true, true); // Останавливаем текущую анимацию
-        $(this).css({ opacity: 1 }); // Устанавливаем видимость на 1
+        $(this).css({ opacity: 1 });
     });
 
     menu.on('mouseleave', function() {
         closeMenu();
     });
 });
+
 
 $(document).ready(function() {
     // Открытие/закрытие меню

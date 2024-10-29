@@ -304,6 +304,12 @@ p {
     justify-content: center;
 }
 
+.card_slider_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
 .card_slider_info {
     background-position: top left;
     height: 126px;

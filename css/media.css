@@ -1,23 +1,10 @@
 @media (max-width:1480px) {
     .wrapper {
-        padding: 0 40px;
+        padding: 0 20px;
     }
 }
 
 @media (max-width:440px) {
-    section,
-    #production::before {
-        display: none !important;
-    }
-    #contact_forms,
-    #product,
-    #history_brand,
-    #production,
-    #about,
-    #consultation,
-    #news {
-        display: block !important;
-    }
     .center_header,
     .left_header button,
     .basket_name,
@@ -66,6 +53,9 @@
     }
     #about {
         overflow-x: hidden;
+    }
+    #about .wrapper {
+        padding: 0;
     }
     .card_slider_content {
         display: none;
@@ -116,10 +106,18 @@
     #production {
         height: unset;
         padding-top: 60px;
+        background-image: url(../img/bg/mob_bg1.png);
+        background-size: cover;
+    }
+    #production::before {
+        display: none;
+    }
+    #product .wrapper {
+        padding: 0;
     }
     .production {
         flex-direction: column;
-        padding: 60px 10px 300px 30px;
+        padding: 0 10px 300px 20px;
         gap: 30px;
     }
     .video_box {
@@ -164,6 +162,7 @@
     }
     #history_brand {
         padding-bottom: 60px;
+        height: auto;
     }
     .brand_content {
         position: relative;
@@ -330,14 +329,16 @@
         background-size: cover;
         padding: 50px 20px;
         gap: 50px;
+        border-radius: 33.5px;
+    }
+    .contact_form form {
+        display: flex;
+        flex-direction: column;
     }
     .contact_form,
     .right_contact {
         width: 100%;
         height: auto;
-    }
-    .right_contact {
-        padding: 0 30px
     }
     .form_title {
         font-size: 22px;
@@ -363,10 +364,17 @@
         right: -20px;
     }
     .consult_info {
-        padding: 20px 30px 0 30px;
+        padding: 20px 0 0 0;
+    }
+    .consultation_btn {
+        scale: .8;
     }
     .consult_info {
         gap: 20px;
+    }
+    .call_box a,
+    .right_top_footer .number_href {
+        font-size: 24px;
     }
     .news_info .bg_btn_w,
     .news_info p {
@@ -376,12 +384,20 @@
         flex-direction: column;
         gap: 40px;
     }
+    .news_card {
+        scale: .8;
+    }
+    .news_content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .news_content .news_card:nth-child(2),
     .news_content .news_card:nth-child(3) {
         display: none;
     }
     #news {
-        padding: 50px 30px 50px 30px;
+        padding: 50px 0 50px 0;
     }
     .news_info {
         padding-top: 0;

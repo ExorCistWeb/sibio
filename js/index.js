@@ -7,17 +7,15 @@ $(document).ready(function() {
     let currentIndex = 0;
     let leftValues = [];
 
-    // Функция для обновления значений смещения в зависимости от ширины контейнера
     function updateLeftValues() {
-        const buttonWidth = buttons.outerWidth(true); // Ширина кнопки с учетом внешних отступов
+        const buttonWidth = buttons.outerWidth(true);
         leftValues = Array.from({ length: totalButtons }, (_, index) => (index * buttonWidth));
     }
 
-    // Инициализация значений смещения
     updateLeftValues();
 
-    const scrollFon = $('.a_slide_one'); // Элемент для фона
-    const cardSliders = $('.card_slider_content .card_slider'); // Слайдеры карточек
+    const scrollFon = $('.a_slide_one');
+    const cardSliders = $('.card_slider_content .card_slider');
 
     const backgrounds = [
         'orange_s.png', 'blue_s.png', 'blue_s.png',
@@ -41,14 +39,15 @@ $(document).ready(function() {
         $('.s_content img').fadeOut(300, function() {
             $(this).attr('src', backgroundSrc).fadeIn(300);
         });
-        scrollFon.stop().animate({ left: -leftValues[index] + 'px' }, 300);
+        const shift = window.innerWidth < 768 ? leftValues[index] / 2 : leftValues[index];
+        scrollFon.stop().animate({ left: -shift + 'px' }, 300);
     }
 
     function updateCardButtonBackgrounds(index) {
         $('.about_card_btn').each(function(i) {
             const buttonBackground = (i === index) ?
                 cardButtonBackgrounds[i] :
-                'plus_btn.svg'; // Статичный фон
+                'plus_btn.svg';
             $(this).css('background-image', `url(./img/effects/${buttonBackground})`);
         });
     }
@@ -100,6 +99,8 @@ $(document).ready(function() {
         }
     });
 
-    // Обновляем значения смещения при изменении размера окна
-    $(window).on('resize', updateLeftValues);
+    $(window).on('resize', function() {
+        updateLeftValues();
+        activateCardAndButton(currentIndex);
+    });
 });

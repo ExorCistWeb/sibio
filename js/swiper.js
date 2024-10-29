@@ -24,6 +24,8 @@ var swiper = new Swiper(".productSwiper", {
         0: {
             slidesPerView: 'auto', // Количество слайдов
             spaceBetween: 20, // Промежуток между слайдами
+            centeredSlides: true,
+            centeredSlidesBounds: true
         },
         // Брейкпоинт для экранов до 768 пикселей
         768: {

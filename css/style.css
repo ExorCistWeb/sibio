@@ -264,6 +264,7 @@ p {
 .card_slider {
     display: flex;
     width: 256px;
+    cursor: pointer;
     height: 361px;
     flex-direction: column;
 }
@@ -1926,7 +1927,8 @@ footer {
     top: 40px;
     background: url(../img/bg/catalog_menu.png);
     border-radius: 14px;
-    height: 662px;
+    min-height: 662px;
+    background-size: cover;
     z-index: 9991;
     padding: 70px 70px 68px 73px;
     display: none;

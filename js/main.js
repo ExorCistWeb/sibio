@@ -50,7 +50,7 @@ $(document).ready(function() {
             opacity: 1,
             right: '0',
             top: '40px',
-            height: '662px',
+
             padding: '70px 70px 68px 73px'
         });
     }

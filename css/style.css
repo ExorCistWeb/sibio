@@ -3948,6 +3948,7 @@ h5.accordion.active::after {
 }
 
 .basket_product:hover {
+    width: 100%;
     background-image: url(../img/basket/basket_product.png);
     background-repeat: no-repeat;
     background-size: cover;

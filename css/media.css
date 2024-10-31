@@ -550,6 +550,64 @@
     .production .video img {
         width: 100%;
     }
+    .backet_content {
+        align-items: center;
+        flex-direction: column;
+    }
+    .search_product {
+        gap: 20px;
+        border-radius: 40px;
+        flex-direction: column;
+    }
+    .search_product_info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search_product_parametrs {
+        flex-wrap: wrap;
+        max-width: 185px;
+        gap: 15px;
+        justify-content: space-between;
+    }
+    .delete_product img {
+        width: 30px;
+        height: 30px;
+    }
+    .redact_sum {
+        order: 1;
+        margin: 0;
+    }
+    .backet_info {
+        width: 100%;
+        max-width: 886px;
+    }
+    .basket_title {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: start;
+        align-items: start;
+    }
+    .basket_title h1 {
+        font-size: 24px;
+    }
+    .result_box {
+        padding: 30px 30px;
+        width: 100%;
+        height: unset;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0 40px 40px 0;
+    }
+    .result_flex {
+        flex-direction: column;
+    }
+    .basket_sidebar {
+        align-items: center;
+    }
+    .back_to_basket {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
 }
 
 .mob_contact_link {

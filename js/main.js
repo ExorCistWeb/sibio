@@ -218,3 +218,8 @@ document.querySelector('.dropdown-button').addEventListener('click', function() 
     const dropdownContent = document.querySelector('.dropdown-content');
     dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
 });
+
+document.getElementById("filter_btn").addEventListener("click", function() {
+    const catalogSidebar = document.querySelector(".catalog_page_sidebar");
+    catalogSidebar.style.display = catalogSidebar.style.display === "none" || catalogSidebar.style.display === "" ? "block" : "none";
+});

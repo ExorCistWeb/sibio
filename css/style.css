@@ -2363,6 +2363,7 @@ h5.accordion.active::after {
     font-family: 'TT Norms Pro';
     color: #fff;
     display: flex;
+    align-items: center;
 }
 
 .links_info a:last-child {
@@ -3809,10 +3810,20 @@ h5.accordion.active::after {
 
 .detalInfoSwiper {
     max-width: 410px;
+    width: 100%;
+}
+
+.detal_info p {
+    font-size: 14px;
+}
+
+#detal_info h2 {
+    font-size: 20px;
 }
 
 .detal_info_content_swiper {
     position: relative;
+    width: 100%;
 }
 
 .detalInfoSwiper .detal_swiper_img {
@@ -4240,6 +4251,7 @@ h5.accordion.active::after {
 .cat_page_flex {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .cat_page_flex a {

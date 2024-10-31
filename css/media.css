@@ -310,7 +310,7 @@
         padding-right: 30px;
     }
     .left_contact {
-        padding-left: 30px;
+        padding-left: 0;
     }
     .left_content_btn::-webkit-scrollbar {
         display: none;
@@ -538,6 +538,17 @@
     }
     .links_info {
         flex-wrap: wrap;
+    }
+    .production .video_box {
+        width: 100%;
+        padding: 0;
+        max-width: unset;
+    }
+    .production .video {
+        width: 100%;
+    }
+    .production .video img {
+        width: 100%;
     }
 }
 

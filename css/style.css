@@ -2417,6 +2417,7 @@ h5.accordion.active::after {
     position: relative;
     width: 686px;
     height: 359px;
+    z-index: 9;
     display: flex;
     justify-content: space-between;
     background-image: url(../img/catalog/catalog_card.png);
@@ -2432,7 +2433,7 @@ h5.accordion.active::after {
 .catalog_card::after,
 .catalog_card::before {
     position: absolute;
-    z-index: -0;
+    z-index: -3;
     display: block;
     opacity: 0;
     /* Изначально скрыто */
@@ -2442,6 +2443,7 @@ h5.accordion.active::after {
 }
 
 .catalog_card::after {
+    z-index: 1;
     top: -101px;
     left: -103px;
     content: '';

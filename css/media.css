@@ -608,6 +608,30 @@
         margin: 0 auto;
         margin-top: 30px;
     }
+    .catalog_card {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0 40px 40px 0;
+        height: 100%;
+        flex-direction: column;
+    }
+    .catalog_page {
+        padding: 40px 0;
+    }
+    .catalog_info {
+        padding: 49px 0 37px 58px;
+    }
+    .catalog_img {
+        height: 360px;
+        width: 100%;
+        object-fit: scale-down;
+        margin: 0 auto;
+    }
+    .catalog_img img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .mob_contact_link {
